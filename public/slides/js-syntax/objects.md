@@ -5,17 +5,20 @@
 
 <div class="fragment fade-out" data-fragment-index="1">
 
-* Un objet est une collection des variables (données) et fonctions (traitements), appelées membres
-  * Les variables sont appelées propriétés
-  * Les fonctions sont appelées méthodes
+* Un objet est une collection des propriétés
+  * Une propriété est une paire clef-valeur
+  * La clef est une chaine caractère (ou symbole)
+  * La valeur est une valeur libre
+  * Une méthode est une propriété dont la valeur est une fonction
 
 
 </div>
 <div class="fragment fade-in-then-out" data-fragment-index="1">
 
-* Chaque membre est déclaré comme une paire clé-valeur, séparée par des deux-points
-* Les membres sont séparés par virgules
-* Le tout entouré par des accolades 
+* Syntaxe :
+  * L'objet est entouré par des accolades
+  * Les propriétés sont séparés par des virgules
+  * Un deux-point sépare la clef, ou nom, et la valeur
 
 ```javascript
 const person = {
@@ -31,9 +34,9 @@ const person = {
 
 <div class="fragment fade-in-then-out" data-fragment-index="2">
 
-* Syntaxe concise pour déclarer une propriété
-  * Si clé égale l'identifiant d'une variable locale
-* Syntaxe concise pour déclarer une méthode
+* Syntaxe concise pour
+  * Une propriété dont le nom et la valeur correspondent aux nom et valeur d'une variable 
+  * Une méthode
 
 ```javascript [3-4]
 const name = 'John'
@@ -49,7 +52,8 @@ const person = {
 
 <div class="fragment fade-in-then-out" data-fragment-index="3">
 
-* Les clés (noms des membres) peuvent être dynamiques : syntaxe entre crochets `[]`
+* Les clefs peuvent être dynamiques
+  * Syntaxe entre crochets `[]`
 
 ```javascript [5,6]
 const lang = 'fr';
@@ -67,8 +71,8 @@ const person = {
 
 <div class="fragment fade-in-then-out" data-fragment-index="4">
 
-* Accès aux members avec un point : nom static
-* Ou avec crochets : nom dynamique
+* Accès aux propriétés avec un point : clef statique
+* Ou avec crochets : clef dynamique
 
 ```javascript [7-10]
 const person = {
