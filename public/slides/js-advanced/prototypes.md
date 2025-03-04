@@ -7,7 +7,7 @@
 
 <div class="fragment fade-out" data-fragment-index="1">
 
-Un objet "vide" en JavaScript  a déjà des propriétés.
+Un objet "vide" en JavaScript a déjà des propriétés.
 
 Comment cela est-il possible ?
 
@@ -24,7 +24,7 @@ obj.toString(); // Cela marche !
   * Le prototype est simplement un autre objet
   * Il peut être nul
   * Il a, en tant qu'objet, un prototype (peut-être nul)
-* On parle d'une chaîne de prototype
+* On parle de la **chaîne de prototype**
 
 
 </div>
@@ -45,9 +45,9 @@ typeof prototype.toString;  // function
 
 <div class="fragment fade-in-then-out" data-fragment-index="3">
 
-* Lorsqu'une propriété est accédée, par sa clef, sur un objet, l'objet est d'abord cherché pour une propriété de la même clef
+* Lorsqu'une propriété est accédée, par sa clé, sur un objet, l'objet est d'abord cherché pour une propriété de la même clé
 * Si une telle propriété n'est pas trouvé, la chaîne de prototype est cherché, en partant de l'objet même
-* Jusqu'à ce qu'une propriété de la même clef soit trouvée, ou un prototype nul soit rencontrée
+* Jusqu'à ce qu'une propriété de la même clé soit trouvée, ou un prototype nul soit rencontrée
 
 
 </div>
@@ -60,17 +60,41 @@ typeof prototype.toString;  // function
 ```javascript
 const obj = {};
 Object.prototype.toString === obj.toString;     // true
+obj.toString();
 ```
 
 </div>
 
-<div class="fragment" data-fragment-index="5">
+<div class="fragment fade-in-then-out" data-fragment-index="5">
+
+* Deux propriétés ayant la même clé peuvent exister dans la chaîne de prototype d'un objet
+* C'est la valeur de la propriété la plus proche de l'objet qui sera prise en compte
+* On parle de la **redéfinition des propriétés**
+
+```javascript
+const obj = {
+  toString() { return "This is an object"; }
+};
+obj.toString();             // This is an object
+```
+
+</div>
+
+<div class="fragment" data-fragment-index="6">
 
 * La méthode `Object.create()` permet de créer un objet avec un prototype personalisé
 
 ```javascript
 const prototypeless = Object.create(null);
 prototypeless.toString;             // undefined
+
+Loggable = {
+  log() {
+    console.log(this.toString());
+  },
+};
+const obj = Object.create(Loggable);
+obj.log();                          // [object Object]
 ```
 
 </div>
