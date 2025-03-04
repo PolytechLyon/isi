@@ -33,19 +33,19 @@ const person = new Person('John', 'Smith');
 
 <div class="fragment fade-in-then-out" data-fragment-index="2">
 
-* En tant que fonction, le constructeur a une propriété `prototype`, dont la valeur est un objet
+* Le constructeur a une propriété `prototype`, dont la valeur est un objet
 * Cet objet est assigné en tant que prototype de `this`
 
-```javascrip[5-7,9]
-function Person(firstname, lastname) {
-  this.firstname = firstname;
-  this.lastname = lastname;
+```javascrip[]
+function Person(name) {
+  this.name = name;
 }
 Person.prototype.greet = function() {
-  console.log(`Hello ${this.firstname}`);
+  console.log(`Hello ${this.name}`);
 }
 const person = new Person('John', 'Smith');
-person.greet();     // Hello John 
+Person.prototype === Object.getPrototypeOf(person); // true
+person.greet();                                     // Hello John 
 ```
 
 </div>

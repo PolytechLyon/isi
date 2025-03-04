@@ -6,20 +6,20 @@
 <div class="fragment fade-out" data-fragment-index="1" style="margin: inherit">
 
 Rappel
-* Les principes de la programmation orientée objet
-  * Encapsulation
-  * Héritage
-  * Polymorphisme
+* **Les principes de la programmation orientée objet**
+  * **Encapsulation**
+  * **Héritage**
+  * **Polymorphisme**
 
 </div>
 
 <div class="fragment fade-in-then-out" data-fragment-index="1" style="margin: inherit">
 
 En JavaScript
-* Les principes de la programmation orientée objet
-  * Encapsulation : les propriétés et les méthodes 
-  * Héritage : la chaîne de prototype
-  * Polymorphisme : la redéfinition des propriétés
+* **Les principes de la programmation orientée objet**
+  * **Encapsulation** : les propriétés et les méthodes 
+  * **Héritage** : la chaîne de prototype
+  * **Polymorphisme** : la redéfinition des propriétés
 </div>
 
 <div class="fragment fade-in" data-fragment-index="2">
