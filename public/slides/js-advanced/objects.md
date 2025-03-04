@@ -6,8 +6,8 @@
 <div class="fragment fade-out" data-fragment-index="1">
 
 * Un objet est une collection des propriétés
-  * Une propriété est une paire clef-valeur
-  * La clef est une chaine caractère (ou symbole)
+  * Une propriété est une paire clé-valeur
+  * La clé est une chaine caractère (ou symbole)
   * La valeur est une valeur libre
   * Une méthode est une propriété dont la valeur est une fonction
 
@@ -18,7 +18,7 @@
 * Syntaxe :
   * L'objet est entouré par des accolades
   * Les propriétés sont séparés par des virgules
-  * Un deux-point sépare la clef, ou nom, et la valeur
+  * Un deux-point sépare la clé, ou nom, et la valeur
 
 ```javascript
 const person = {
@@ -52,7 +52,7 @@ const person = {
 
 <div class="fragment fade-in-then-out" data-fragment-index="3">
 
-* Les clefs peuvent être dynamiques
+* Les clés peuvent être dynamiques
   * Syntaxe entre crochets `[]`
 
 ```javascript [5,6]
@@ -71,8 +71,8 @@ const person = {
 
 <div class="fragment fade-in-then-out" data-fragment-index="4">
 
-* Accès aux propriétés avec un point : clef statique
-* Ou avec crochets : clef dynamique
+* Accès aux propriétés avec un point : clé statique
+* Ou avec crochets : clé dynamique
 
 ```javascript [7-10]
 const person = {
