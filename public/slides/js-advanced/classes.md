@@ -18,7 +18,7 @@ Création avec le mot-clé <code>class</code>
 </li>
 
 <li class="fragment fade-in-then-out" data-fragment-index="2">
-Déclaration d'une propriété commune
+Déclaration d'une propriété
 </li>
 
 <li class="fragment fade-in-then-out" data-fragment-index="3">

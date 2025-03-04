@@ -15,7 +15,7 @@
 </div>
 <div class="fragment fade-in-then-out" data-fragment-index="1">
 
-* Syntaxe :
+* Syntaxe
   * L'objet est entouré par des accolades
   * Les propriétés sont séparés par des virgules
   * Un deux-point sépare la clé, ou nom, et la valeur

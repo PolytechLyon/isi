@@ -46,7 +46,7 @@ typeof prototype.toString;  // function
 <div class="fragment fade-in-then-out" data-fragment-index="3">
 
 * Lorsqu'une propriété est accédée, par sa clé, sur un objet, l'objet est d'abord cherché pour une propriété de la même clé
-* Si une telle propriété n'est pas trouvé, la chaîne de prototype est cherché, en partant de l'objet même
+* Si une telle propriété n'est pas trouvée, la chaîne de prototype est cherché, en partant de l'objet même
 * Jusqu'à ce qu'une propriété de la même clé soit trouvée, ou un prototype nul soit rencontrée
 
 
@@ -67,7 +67,7 @@ obj.toString();
 
 <div class="fragment fade-in-then-out" data-fragment-index="5">
 
-* Deux propriétés ayant la même clé peuvent exister dans la chaîne de prototype d'un objet
+* Deux propriétés ayant la même clé peuvent coexister dans la chaîne de prototype d'un objet
 * C'est la valeur de la propriété la plus proche de l'objet qui sera prise en compte
 * On parle de la **redéfinition des propriétés**
 
