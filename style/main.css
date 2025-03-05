@@ -133,3 +133,22 @@
 .reveal strong {
     font-weight: inherit;
 }
+
+#eval-console {
+    position: absolute;
+    background: var(--r-selection-background-color);
+    width: 400px;
+    height: 300px;
+    bottom: 50px;
+    left: 50px;
+    z-index: 1000;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: left;
+    font-size: 0.55em;
+    font-family: var(--r-code-font), monospace;
+    line-height: 1.2em;
+    word-wrap: break-word;
+
+    color: var(--r-inline-code-color)
+}
