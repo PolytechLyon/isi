@@ -88,7 +88,7 @@ obj.toString();             // This is an object
 const prototypeless = Object.create(null);
 prototypeless.toString;             // undefined
 
-Loggable = {
+const Loggable = {
   log() {
     console.log(this.toString());
   },
