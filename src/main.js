@@ -31,6 +31,13 @@ function createDemoFrame(element) {
     `;
 }
 
+function copyToClipboard(event) {
+    const text = event.target.closest('code')?.innerText?.trim()
+    if (text) {
+        navigator.clipboard.writeText(text).then();
+    }
+}
+
 function createCodeIcons(element) {
     const externalExample = element
         .parentElement
@@ -43,13 +50,13 @@ function createCodeIcons(element) {
                     alt="Exemple extèrne" />
           </a>` : '';
     element.innerHTML += `<div class="icons">
-            <a
-                onclick="navigator.clipboard.writeText(event.target.closest('code')?.innerText?.trim())" 
+            <a 
                 class="no-print">
                 <img src="images/copy.svg" alt="Copier" />
             </a>
             ${externalLink}
         </div>`;
+    element.getElementsByTagName("a")[0].addEventListener("click", copyToClipboard);
 }
 
 Reveal.initialize({
