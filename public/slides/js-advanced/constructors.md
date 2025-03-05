@@ -36,7 +36,7 @@ const person = new Person('John', 'Smith');
 * Le constructeur a une propriété `prototype`, dont la valeur est un objet
 * Cet objet est assigné en tant que prototype de `this`
 
-```javascrip[]
+```javascript []
 function Person(name) {
   this.name = name;
 }

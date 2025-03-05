@@ -107,12 +107,11 @@ const p = new Person('Jean', 19);
 console.log(p.canDrive);
 </code></pre>
 
-<pre><code
-    class="javascript language-javascript fix error fragment fade-in-then-out"
+<pre class="error fragment fade-in-then-out" data-fragment-index="7"><code
+    class="javascript language-javascript fix"
     data-trim
     data-noescape
-    data-line-numbers
-    data-fragment-index="7">
+    data-line-numbers>
 p.#age;    // Error: Expected identifier but found "#age"
 </code></pre>
 </div>
