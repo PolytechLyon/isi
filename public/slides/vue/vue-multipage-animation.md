@@ -1,4 +1,3 @@
-#### Vue.js
 ### Application web classiques
 
 * Une page par lien

@@ -1,4 +1,3 @@
-#### Vue.js
 ### Application web monopage
 
 * Une page par application

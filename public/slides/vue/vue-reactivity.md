@@ -1,4 +1,3 @@
-#### Vue.js
 ### Réactivité
 
 <div class="r-stack">
