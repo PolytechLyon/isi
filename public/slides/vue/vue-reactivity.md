@@ -4,7 +4,7 @@
 
 <div class="fragment fade-out" data-fragment-index="2">
 
-<div style="display: flex; justify-content: space-between">
+<div style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;">
 
 <div>
 
