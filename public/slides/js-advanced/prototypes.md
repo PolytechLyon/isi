@@ -1,4 +1,3 @@
-#### JavaScript
 ### Le prototype d'objet
 
 <div class="r-stack">

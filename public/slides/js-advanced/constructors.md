@@ -1,4 +1,3 @@
-#### JavaScript
 ### Les constructeurs
 
 <div class="r-stack">
