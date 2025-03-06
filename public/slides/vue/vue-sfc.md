@@ -115,17 +115,15 @@ export default {
 
 * Déclarer les props avec `defineProps()`
 
-<div data-external-example="https://play.vuejs.org/#eNp9kkGP0zAQhf/KyEJKKhX3AKeQIljUAwjBCjggbZA2m0y63k1sy3ZCqij/nbHTpukKNSd73svzjP0N7KPWvGuRJSy1hRHagUXX6veZFI1WxsEABisYoTKqgYis0SzRvzetc0oeRb6ZKz4zepfJQknrQCsrnKAlbH1afPdnRVqpirZB6XhelruOFl+FdSjRxFFRi+I5WkM89Gs4jCvYUkMQvjmLd3ndItetfYwHqLFyCdy/GvpR9/drcEqH7cFvYVz5A9PNNCJl0cZho+vc4TE5PU/Tva6U2WbsdBQIeT42Y5CcNgsPlTeUlG4WsWzNnKUbqMSeP1kl6ZIHf1jGCtVoUaP5ro+ZCQTFa3ldq79fQs2ZFtenevGIxfN/6k+297WM3Rq0aDrM2Ky53OzRTfLu5zfsaT2LjSrbmtxXxB9oVd1O83nbTStLanvhC91+DjwIuf9ldz09oT0N5Rv1zjH4M0ZUfLoy+rndN/xt+C+TI93iBVbXUC2xEhJvjdL2AtkziUHaLo3xXXR6xChwOTkNNqpDssbo8QPkU3d8EuIXQF3ilD5MJCXWHWr0mPiT+AKWDwFxbolTkqfMjB1Z/J1upoCXRKUhjxbH/GHmMoH8IbwV+kujxoKRjf8ATaJV+Q=="></div>
+<div data-external-example="https://play.vuejs.org/#eNp9Uk1vnDAQ/SsjqxKstPUe2hNlqzbVHlpVbdT2UClECoFh4wRsyzaEFeK/Z2xYdhNF4TQz7/Hmw29gX7XmXYssYaktjNAOLLpWf86kaLQyDgYwWMEIlVENRESNFoj+vWidU3IG+WapeM3oUyYLJa0DraxwgkLYerX46npFWKmKtkHpeF6Wu46Cn8I6lGjiqKhF8RCtIR76NRzGFWxpIAjfosW7vG6R69bexQPUWLkEbt4N/aj7mzU4pUN68CmMK98w3UwrkhYlDhtd5w5n5fS0Tfe+UmabsWMrEPLUNmOQHJMzDpU3pJRuzmTZmjlLF6jEnt9bJenIg2+WsUI1WtRofutZM4GAeCyva/X4I9ScaXF9rBd3WDy8Ur+3va9l7NKgRdNhxhbM5WaPboJ3f39hT/ECNqpsa2K/Af5Bq+p22s/TLlpZ0thnvDDt9+AHIff/7K6nJ7THpfygnjkGfsbIFd/eWP007gf+MfyXyZGu+MxWr1h1dplR2jusxEpIvPRZfBUdHygKnpuYBhvVIVFj9NYC5FNnPgHxC7M8t0p6O7kkse5Qo7eA78TPjPAl2Jdb8iDBk2bGZp/9TzeTwEu3pEGPgll/WDyXQH4b3gH9QWiwQGTjE+f2SPA="></div>
 
 ```vue
 <script setup>
-import { defineProps } from 'vue';
 const props = defineProps(['position']);
 const remove = (e) => e.target.remove();
 </script>
 <template>
-  <button :style="props.position" @click.stop="remove">
-    X</button>
+  <button :style="props.position" @click.stop="remove">X</button>
 </template>
 <style>
 button { position: absolute }
@@ -138,7 +136,7 @@ button { position: absolute }
 
 * Les composants importés sont automatiquement enregistrés localement
 
-<div data-external-example="https://play.vuejs.org/#eNp9kkGP0zAQhf/KyEJKKhX3AKeQIljUAwjBCjggbZA2m0y63k1sy3ZCqij/nbHTpukKNSd73svzjP0N7KPWvGuRJSy1hRHagUXX6veZFI1WxsEABisYoTKqgYis0SzRvzetc0oeRb6ZKz4zepfJQknrQCsrnKAlbH1afPdnRVqpirZB6XhelruOFl+FdSjRxFFRi+I5WkM89Gs4jCvYUkMQvjmLd3ndItetfYwHqLFyCdy/GvpR9/drcEqH7cFvYVz5A9PNNCJl0cZho+vc4TE5PU/Tva6U2WbsdBQIeT42Y5CcNgsPlTeUlG4WsWzNnKUbqMSeP1kl6ZIHf1jGCtVoUaP5ro+ZCQTFa3ldq79fQs2ZFtenevGIxfN/6k+297WM3Rq0aDrM2Ky53OzRTfLu5zfsaT2LjSrbmtxXxB9oVd1O83nbTStLanvhC91+DjwIuf9ldz09oT0N5Rv1zjH4M0ZUfLoy+rndN/xt+C+TI93iBVbXUC2xEhJvjdL2AtkziUHaLo3xXXR6xChwOTkNNqpDssbo8QPkU3d8EuIXQF3ilD5MJCXWHWr0mPiT+AKWDwFxbolTkqfMjB1Z/J1upoCXRKUhjxbH/GHmMoH8IbwV+kujxoKRjf8ATaJV+Q=="></div>
+<div data-external-example="https://play.vuejs.org/#eNp9Uk1vnDAQ/SsjqxKstPUe2hNlqzbVHlpVbdT2UClECoFh4wRsyzaEFeK/Z2xYdhNF4TQz7/Hmw29gX7XmXYssYaktjNAOLLpWf86kaLQyDgYwWMEIlVENRESNFoj+vWidU3IG+WapeM3oUyYLJa0DraxwgkLYerX46npFWKmKtkHpeF6Wu46Cn8I6lGjiqKhF8RCtIR76NRzGFWxpIAjfosW7vG6R69bexQPUWLkEbt4N/aj7mzU4pUN68CmMK98w3UwrkhYlDhtd5w5n5fS0Tfe+UmabsWMrEPLUNmOQHJMzDpU3pJRuzmTZmjlLF6jEnt9bJenIg2+WsUI1WtRofutZM4GAeCyva/X4I9ScaXF9rBd3WDy8Ur+3va9l7NKgRdNhxhbM5WaPboJ3f39hT/ECNqpsa2K/Af5Bq+p22s/TLlpZ0thnvDDt9+AHIff/7K6nJ7THpfygnjkGfsbIFd/eWP007gf+MfyXyZGu+MxWr1h1dplR2jusxEpIvPRZfBUdHygKnpuYBhvVIVFj9NYC5FNnPgHxC7M8t0p6O7kkse5Qo7eA78TPjPAl2Jdb8iDBk2bGZp/9TzeTwEu3pEGPgll/WDyXQH4b3gH9QWiwQGTjE+f2SPA="></div>
 
 ```vue [3, 10]
 <script setup>

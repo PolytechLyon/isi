@@ -23,10 +23,8 @@ function useClickCoordinates() {
   function pop({ x, y }) {
     coordinates.value.push({ x, y });
   }
-  onMounted(() =>
-      document.addEventListener('click', pop));
-  onUnmounted(() =>
-      document.removeEventListener('click', pop));
+  onMounted(() => document.addEventListener('click', pop));
+  onUnmounted(() => document.removeEventListener('click', pop));
   return { coordinates };
 }
 ```
