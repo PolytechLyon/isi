@@ -1,4 +1,3 @@
-#### Vue.js
 ### Démo
 
 <div class="r-stack">

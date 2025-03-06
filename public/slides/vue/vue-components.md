@@ -1,4 +1,3 @@
-#### Vue.js
 ### Les composants
 
 <div class="r-stack">

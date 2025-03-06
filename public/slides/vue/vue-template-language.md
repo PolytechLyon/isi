@@ -1,4 +1,3 @@
-#### Vue.js
 ### Syntaxe de gabarit
 
 <div class="r-stack">

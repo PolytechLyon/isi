@@ -1,4 +1,3 @@
-#### Vue.js
 ### Création d'une application
 
 * Via un CDN (Réseau de diffusion de contenu)

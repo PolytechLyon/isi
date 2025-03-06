@@ -1,4 +1,3 @@
-#### Vue.js
 ### Composant mono-fichier
 
 <div class="r-stack">

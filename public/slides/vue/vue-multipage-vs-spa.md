@@ -1,4 +1,3 @@
-#### Vue.js
 ### Classique vs monopage
 
 * Applications web classique (multi-page)
