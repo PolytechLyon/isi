@@ -1,4 +1,3 @@
-#### Javascript
 ### Langage orienté objet
 * Support de POO basé sur les **prototypes**
 * On peut créer des objets sans classes

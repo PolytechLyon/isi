@@ -1,4 +1,3 @@
-#### JavaScript
 ### Les fonctions fléchées
 
 <div class="r-stack">

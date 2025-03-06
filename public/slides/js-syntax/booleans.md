@@ -1,4 +1,3 @@
-#### JavaScript
 ### Les booléens
 
 <div class="r-stack">

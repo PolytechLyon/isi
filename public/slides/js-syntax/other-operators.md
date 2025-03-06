@@ -1,4 +1,3 @@
-#### JavaScript
 ### Autres opérateurs
 
 <div class="r-stack">

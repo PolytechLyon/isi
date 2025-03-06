@@ -152,3 +152,7 @@
 
     color: var(--r-inline-code-color)
 }
+
+.reveal-viewport.no-h4 h4 {
+    display: none;
+}
