@@ -1,4 +1,3 @@
-#### JavaScript
 ### Les classes
 
 <div class="r-stack">

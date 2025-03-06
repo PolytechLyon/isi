@@ -1,4 +1,3 @@
-#### JavaScript
 ### L'Orienté Objet
 
 <div class="r-stack">
