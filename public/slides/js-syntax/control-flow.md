@@ -1,4 +1,3 @@
-#### JavaScript
 ### Structures de contrôle
 
 <div class="r-stack">

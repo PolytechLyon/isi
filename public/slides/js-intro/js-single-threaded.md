@@ -1,4 +1,3 @@
-#### Javascript
 ### Non concurrent
 * Un seul fil d'exécution par contexte global (realm)
 * Appels asynchrones possibles

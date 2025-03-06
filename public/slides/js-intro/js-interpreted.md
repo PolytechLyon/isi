@@ -1,4 +1,3 @@
-#### Javascript
 ### Langage interprété
 * Par les navigateurs (standard ECMAScript)
   * Essayer dans le navigateur, outil de dév, console

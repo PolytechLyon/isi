@@ -1,4 +1,3 @@
-#### JavaScript
 ### Les chiffres
 
 <div class="r-stack">

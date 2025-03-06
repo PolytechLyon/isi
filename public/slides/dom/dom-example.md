@@ -1,4 +1,3 @@
-#### DOM
 ### Démo
 
 <div class="r-stack">

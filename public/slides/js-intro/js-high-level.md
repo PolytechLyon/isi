@@ -1,4 +1,3 @@
-#### Javascript
 ### Langage Haut Niveau
 * Abstraction des spécificités techniques
 * Proche des langues naturelles (anglais)

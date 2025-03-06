@@ -1,4 +1,3 @@
-#### JavaScript
 ### Les comparaisons
 
 <div class="r-stack">

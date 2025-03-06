@@ -1,4 +1,3 @@
-#### JavaScript
 ### Déclaration de variable
 
 <div class="r-stack">

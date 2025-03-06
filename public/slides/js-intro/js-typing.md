@@ -1,4 +1,3 @@
-#### Javascript
 ### Typage dynamique
 * Typage faible, aucune déclaration de type
 * Le type peut varier au cours de l'exécution

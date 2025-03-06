@@ -1,4 +1,3 @@
-#### JavaScript
 ### Les chaînes caractères
 
 <div class="r-stack">
