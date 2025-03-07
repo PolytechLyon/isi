@@ -1,0 +1,9 @@
+body {
+    background-color: linen;
+}
+
+#app {
+    button  {
+        position: absolute;
+    }
+}

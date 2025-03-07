@@ -132,6 +132,54 @@ Résultat
 
 <div class="fragment fade-in-then-out" data-fragment-index="9">
 
+* Un composant peut émettre des événements
+
+```javascript [4,8]
+const AppButton = {
+    template: `<button :style @click.stop="remove">X</button>`,
+    props: ['position'],
+    emit: ['remove'],
+    setup({ position }, { emit }) {
+        return {
+            style: { left: `${position.x}px`, top: `${position.y}px` },
+            remove: () => emit('remove', position.key),
+        };
+    }
+}
+```
+
+</div>
+
+<div class="fragment fade-in-then-out" data-fragment-index="10">
+
+* Le composant parent peut réagir à ces événements
+
+```javascript [4,8]
+    <app-button v-for="position in positions"
+                @remove="remove"
+                :position :key="position.key" />
+```
+
+<aside class="notes">
+
+  * Tout le composant sera supprimé, et non pas seulement le bouton
+  * La clé `key` ne peut plus être l'indice dans la liste
+</aside>
+
+</div>
+
+<div class="fragment fade-in-then-out" data-fragment-index="11">
+
+Résultat
+
+<div data-code-example="vue-emit" data-code-example-size="big"></div>
+
+
+</div>
+
+
+<div class="fragment fade-in-then-out" data-fragment-index="12">
+
 * Crochet de cycle de vie de composant
 
 ```javascript [6,7]
@@ -147,7 +195,7 @@ setup() {
 ```
 </div>
 
-<div class="fragment fade-in-then-out" data-fragment-index="10">
+<div class="fragment fade-in-then-out" data-fragment-index="13">
 
 Résultat
 
