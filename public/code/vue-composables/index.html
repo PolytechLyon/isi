@@ -13,8 +13,8 @@
 
   <div id="app">
     <button
-      v-for="position in positions"
-      :style="position"
+      v-for="(style, key) in positions"
+      :style :key
       @click.stop="$event.target.remove()">X</button>
   </div>
   <script src="https://unpkg.com/vue@3"></script>

@@ -69,21 +69,59 @@ createApp({
 </div>
 </div>
 
-<div class="fragment fade-in-then-out" data-fragment-index="5">
+<div class="fragment fade-in" data-fragment-index="5">
+<div class="fragment fade-out" data-fragment-index="8">
+
+<div class="r-stack">
+
+<div class="fragment fade-out" data-fragment-index="6">
 
 * Une fois enregistré, le composant peut être utilisé dans les gabarits d'autres composants.
-* Les attributs sont passés ainsi `:nom="valeur"`
 
-``` [2]
+``` []
   <div id="app">
-    <app-button v-for="position in positions" :position="position" />
+        <app-button
+            v-for="(position, key) in positions"
+            :position="position"
+            :key="key" />
   </div>
 ```
-
-
 </div>
 
 <div class="fragment fade-in-then-out" data-fragment-index="6">
+
+* Les attributs sont passés ainsi `:nom="valeur"`
+
+``` [2-5]
+  <div id="app">
+        <app-button
+            v-for="(position, key) in positions"
+            :position="position"
+            :key="key" />
+  </div>
+```
+</div>
+
+<div class="fragment fade-in" data-fragment-index="7">
+
+* Syntaxe simplifiée `:nom` pour `:nom="nom"`
+
+``` [2-5]
+  <div id="app">
+        <app-button
+            v-for="(position, key) in positions"
+            :position
+            :key />
+  </div>
+```
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class="fragment fade-in-then-out" data-fragment-index="8">
 
 Résultat
 
@@ -92,7 +130,7 @@ Résultat
 
 </div>
 
-<div class="fragment fade-in-then-out" data-fragment-index="7">
+<div class="fragment fade-in-then-out" data-fragment-index="9">
 
 * Crochet de cycle de vie de composant
 
@@ -109,7 +147,7 @@ setup() {
 ```
 </div>
 
-<div class="fragment fade-in-then-out" data-fragment-index="8">
+<div class="fragment fade-in-then-out" data-fragment-index="10">
 
 Résultat
 
