@@ -10,8 +10,8 @@
 ```html fix
 <body>
   <div id="app">
-    <button v-for="position in positions"
-      :style="position" @click.stop="remove">X</button>
+    <button v-for="(style, key) in positions"
+      :style :key @click.stop="remove">X</button>
   </div>
   <script src="https://unpkg.com/vue@3"></script>
   <script src="script.js"></script>

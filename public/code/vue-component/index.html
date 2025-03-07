@@ -12,7 +12,7 @@
 <body>
 
   <div id="app">
-    <app-button v-for="position in positions" :position="position" />
+    <app-button v-for="(position, key) in positions" :position :key />
   </div>
   <script src="https://unpkg.com/vue@3"></script>
   <script src="script.js"></script>

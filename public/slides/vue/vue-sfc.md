@@ -41,8 +41,8 @@
 <template>
   <div>
     <button
-        v-for="position in positions"
-        :style="position"
+        v-for="(style, key) in positions"
+        :style :key
         @click.stop="remove">X</button>
   </div>
 </template>
@@ -115,7 +115,7 @@ export default {
 
 * Déclarer les props avec `defineProps()`
 
-<div data-external-example="https://play.vuejs.org/#eNp9Uk1vnDAQ/SsjqxKstPUe2hNlqzbVHlpVbdT2UClECoFh4wRsyzaEFeK/Z2xYdhNF4TQz7/Hmw29gX7XmXYssYaktjNAOLLpWf86kaLQyDgYwWMEIlVENRESNFoj+vWidU3IG+WapeM3oUyYLJa0DraxwgkLYerX46npFWKmKtkHpeF6Wu46Cn8I6lGjiqKhF8RCtIR76NRzGFWxpIAjfosW7vG6R69bexQPUWLkEbt4N/aj7mzU4pUN68CmMK98w3UwrkhYlDhtd5w5n5fS0Tfe+UmabsWMrEPLUNmOQHJMzDpU3pJRuzmTZmjlLF6jEnt9bJenIg2+WsUI1WtRofutZM4GAeCyva/X4I9ScaXF9rBd3WDy8Ur+3va9l7NKgRdNhxhbM5WaPboJ3f39hT/ECNqpsa2K/Af5Bq+p22s/TLlpZ0thnvDDt9+AHIff/7K6nJ7THpfygnjkGfsbIFd/eWP007gf+MfyXyZGu+MxWr1h1dplR2jusxEpIvPRZfBUdHygKnpuYBhvVIVFj9NYC5FNnPgHxC7M8t0p6O7kkse5Qo7eA78TPjPAl2Jdb8iDBk2bGZp/9TzeTwEu3pEGPgll/WDyXQH4b3gH9QWiwQGTjE+f2SPA="></div>
+<div data-external-example="https://play.vuejs.org/#eNp9kk1vnDAQhv/KyKoEK1H20J4oW7Wp9tCqaqO2h0ohUggMG2fBtmxDWCH+e8bmY5MoCifPvMM74/EzsK9KxV2LLGGpKTRXFgzaVn3OBG+U1BYG0FjBCJWWDQRUGqwS/XvRWivFLMbbNeM8g0+ZKKQwFpQ03HI6ws65hVfXG9JKWbQNChvnZbnv6PCTG4sCdRgUNS+OQQTh0EdwGjewo4HAf6tX3OV1i7FqzV04QI2VTeDm3dCPqr+JwErlw5MLYdy4hul2uiJ5UWCxUXVucXZOz7fp3ldS7zIWLr0iOOJpA1ycu2cMkiWAhGTYklG6feLKImYNLaDih/jeSEE7HlyvjBWyUbxG/VvNXgl4xWl5XcuHHz5ndYvRki/usDi+kr83vctl7FKjQd1hxlbN5vqAdpL3f39hT+dVbGTZ1lT9hvgHjaxbN+NUdtGKksZ+Uuen/e5x4OLwz+x7ekGzXMoN6ipHX58xguLbG1c/j/sh/uj/y8RIW3xG1SukzpBpqRxgJVZc4KWLwqtgeaPAIzdVamxkh1QaoiMLMJ46x5MQvmDlOSnp7QRJYuypRqLE942XPsTFF09vbAhBkifPjM2Y/U+3k8FLWlLvR4fZf1hZSyC/9e+AbiE0mC9k4yOK6kfL"></div>
 
 ```vue
 <script setup>
@@ -136,7 +136,7 @@ button { position: absolute }
 
 * Les composants importés sont automatiquement enregistrés localement
 
-<div data-external-example="https://play.vuejs.org/#eNp9Uk1vnDAQ/SsjqxKstPUe2hNlqzbVHlpVbdT2UClECoFh4wRsyzaEFeK/Z2xYdhNF4TQz7/Hmw29gX7XmXYssYaktjNAOLLpWf86kaLQyDgYwWMEIlVENRESNFoj+vWidU3IG+WapeM3oUyYLJa0DraxwgkLYerX46npFWKmKtkHpeF6Wu46Cn8I6lGjiqKhF8RCtIR76NRzGFWxpIAjfosW7vG6R69bexQPUWLkEbt4N/aj7mzU4pUN68CmMK98w3UwrkhYlDhtd5w5n5fS0Tfe+UmabsWMrEPLUNmOQHJMzDpU3pJRuzmTZmjlLF6jEnt9bJenIg2+WsUI1WtRofutZM4GAeCyva/X4I9ScaXF9rBd3WDy8Ur+3va9l7NKgRdNhxhbM5WaPboJ3f39hT/ECNqpsa2K/Af5Bq+p22s/TLlpZ0thnvDDt9+AHIff/7K6nJ7THpfygnjkGfsbIFd/eWP007gf+MfyXyZGu+MxWr1h1dplR2jusxEpIvPRZfBUdHygKnpuYBhvVIVFj9NYC5FNnPgHxC7M8t0p6O7kkse5Qo7eA78TPjPAl2Jdb8iDBk2bGZp/9TzeTwEu3pEGPgll/WDyXQH4b3gH9QWiwQGTjE+f2SPA="></div>
+<div data-external-example="https://play.vuejs.org/#eNp9kk1vnDAQhv/KyKoEK1H20J4oW7Wp9tCqaqO2h0ohUggMG2fBtmxDWCH+e8bmY5MoCifPvMM74/EzsK9KxV2LLGGpKTRXFgzaVn3OBG+U1BYG0FjBCJWWDQRUGqwS/XvRWivFLMbbNeM8g0+ZKKQwFpQ03HI6ws65hVfXG9JKWbQNChvnZbnv6PCTG4sCdRgUNS+OQQTh0EdwGjewo4HAf6tX3OV1i7FqzV04QI2VTeDm3dCPqr+JwErlw5MLYdy4hul2uiJ5UWCxUXVucXZOz7fp3ldS7zIWLr0iOOJpA1ycu2cMkiWAhGTYklG6feLKImYNLaDih/jeSEE7HlyvjBWyUbxG/VvNXgl4xWl5XcuHHz5ndYvRki/usDi+kr83vctl7FKjQd1hxlbN5vqAdpL3f39hT+dVbGTZ1lT9hvgHjaxbN+NUdtGKksZ+Uuen/e5x4OLwz+x7ekGzXMoN6ipHX58xguLbG1c/j/sh/uj/y8RIW3xG1SukzpBpqRxgJVZc4KWLwqtgeaPAIzdVamxkh1QaoiMLMJ46x5MQvmDlOSnp7QRJYuypRqLE942XPsTFF09vbAhBkifPjM2Y/U+3k8FLWlLvR4fZf1hZSyC/9e+AbiE0mC9k4yOK6kfL"></div>
 
 ```vue [3, 10]
 <script setup>
@@ -148,7 +148,7 @@ button { position: absolute }
 </script>
 
 <template>
-  <AppButton v-for="position in positions" :position="position" />
+  <AppButton v-for="(position, key) in positions" :position :key />
 </template>
 ```
 
