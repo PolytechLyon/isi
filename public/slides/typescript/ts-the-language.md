@@ -73,11 +73,11 @@ TypeScript
 
 <div data-external-example="https://www.typescriptlang.org/play/?ssl=4&ssc=30&pln=1&pc=1#code/DYUwLgBAHgXBB2BXAtgIxAJwgXggFgCYBuCAelIgBUBPABxAgBMBLgY2AEMNmAoUSajggBmAHQBGPBGkzp5KnQZI0mCAEt4AM2bceUIQCJCBkrLNkKAUQwYQiDD0G4DYySfMz512-Z48gA"></div>
 
-```typescript[3-4] has-error no-numbering
+```typescript[2,4] has-error no-numbering
 let x: number = 42; // Type déclaré
+x = "42";
 let y = 3.14        // Type number inféré
-x = "42";           // Erreur
-y = "3.14";         // Erreur
+y = "3.14";
 ```
 </div>
 
@@ -86,9 +86,9 @@ y = "3.14";         // Erreur
 JavaScript
 ```javascript
 let x = 42; // Type déclaré
+x = "42";
 let y = 3.14; // Type number inféré
-x = "42"; // Erreur
-y = "3.14"; // Erreur
+y = "3.14";
 ```
 </div>
 
