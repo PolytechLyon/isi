@@ -162,7 +162,7 @@ export default {
   * Meilleure lisibilité du code
   * Gabarits compilés en avance
   * Style avec portée limitée au composant
-  * Enregistrement des composants automatique et optimisé 
+  * Enregistrement optimisé des composants
 * Inconvénients
   * Phase de compilation obligatoire
 
