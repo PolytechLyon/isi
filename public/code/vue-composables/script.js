@@ -1,24 +1,56 @@
-const { createApp, ref, computed, onMounted, onUnmounted } = Vue;
+const { createApp, ref, computed, readonly, onMounted, onUnmounted } = Vue;
+
+class Coordinare {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    get style() {
+        return { left: `${this.x}px`, top: `${this.y}px` };
+    }
+
+    get key() {
+        return `${this.x},${this.y}`;
+    }
+}
+
+const list = ref([]);
+const coordinates = readonly(list);
 
 /**
  * Store mouse clicks in a reactive array.
  * @returns {{coordinates: { x: number, y: number }}}
  */
 function useClickCoordinates() {
-    const coordinates = ref([]);
-    function pop({ x, y }) {
-        coordinates.value.push({ x, y });
+    function add({ x, y }) {
+        list.value.push(new Coordinare(x, y));
     }
-    onMounted(() => document.addEventListener('click', pop));
-    onUnmounted(() => document.removeEventListener('click', pop));
-    return { coordinates };
+    function remove({ key }) {
+        list.value = list.value.filter(c => c.key !== key);
+    }
+    onMounted(() => document.addEventListener('click', add));
+    onUnmounted(() => document.removeEventListener('click', add));
+    return { coordinates, remove };
+}
+
+const AppButton = {
+    template: `<button :style @click.stop="remove">X</button>`,
+    props: ['coordinate'],
+    setup({ coordinate }) {
+        const { remove } = useClickCoordinates();
+        return {
+            style: coordinate.style,
+            remove: () => remove(coordinate),
+        };
+    }
 }
 
 createApp({
     setup() {
         const { coordinates } = useClickCoordinates();
-        const toPosition = ({ x, y }) => ({ left: `${x}px`, top: `${y}px` });
-        const positions = computed(() => coordinates.value?.map(toPosition));
-        return { positions };
+        return { coordinates };
     }
-}).mount('#app');
+})
+.component('app-button', AppButton)
+.mount('#app');

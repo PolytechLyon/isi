@@ -12,10 +12,9 @@
 <body>
 
   <div id="app">
-    <button
-      v-for="(style, key) in positions"
-      :style :key
-      @click.stop="$event.target.remove()">X</button>
+    <app-button
+      v-for="coordinate in coordinates"
+      :coordinate :key="coordinate.key">X</app-button>
   </div>
   <script src="https://unpkg.com/vue@3"></script>
   <script src="script.js"></script>
