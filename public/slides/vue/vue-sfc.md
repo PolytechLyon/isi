@@ -102,10 +102,8 @@ export default {
     positions.value.push({ left: `${x}px`, top: `${y}px` });
   }
   const remove = (e) => e.target.remove();
-  onMounted(() =>
-          document.addEventListener('click', pop));
-  onUnmounted(() =>
-          document.removeEventListener('click', pop));
+  onMounted(() => document.addEventListener('click', pop));
+  onUnmounted(() => document.removeEventListener('click', pop));
 </script>
 ```
 
@@ -115,18 +113,22 @@ export default {
 
 * Déclarer les props avec `defineProps()`
 
-<div data-external-example="https://play.vuejs.org/#eNp9kk1vnDAQhv/KyKoEK1H20J4oW7Wp9tCqaqO2h0ohUggMG2fBtmxDWCH+e8bmY5MoCifPvMM74/EzsK9KxV2LLGGpKTRXFgzaVn3OBG+U1BYG0FjBCJWWDQRUGqwS/XvRWivFLMbbNeM8g0+ZKKQwFpQ03HI6ws65hVfXG9JKWbQNChvnZbnv6PCTG4sCdRgUNS+OQQTh0EdwGjewo4HAf6tX3OV1i7FqzV04QI2VTeDm3dCPqr+JwErlw5MLYdy4hul2uiJ5UWCxUXVucXZOz7fp3ldS7zIWLr0iOOJpA1ycu2cMkiWAhGTYklG6feLKImYNLaDih/jeSEE7HlyvjBWyUbxG/VvNXgl4xWl5XcuHHz5ndYvRki/usDi+kr83vctl7FKjQd1hxlbN5vqAdpL3f39hT+dVbGTZ1lT9hvgHjaxbN+NUdtGKksZ+Uuen/e5x4OLwz+x7ekGzXMoN6ipHX58xguLbG1c/j/sh/uj/y8RIW3xG1SukzpBpqRxgJVZc4KWLwqtgeaPAIzdVamxkh1QaoiMLMJ46x5MQvmDlOSnp7QRJYuypRqLE942XPsTFF09vbAhBkifPjM2Y/U+3k8FLWlLvR4fZf1hZSyC/9e+AbiE0mC9k4yOK6kfL"></div>
+<div data-external-example="https://play.vuejs.org/#eNp9Uk1v1DAQ/SsjCylZaXEOcArZCor2AEJQAQekBqlpMtmmm9iW7YSsovx3xs7HttWqPtnz3ryZ8byBfVKKdy2ymCUm15WyYNC26ioVVaOktjCAxhJGKLVsICBqsEKUe91aK8UM8miNOM3gQypyKYwFJU1lK7rCzqmFt383hBUybxsUlmdFse/o8q0yFgXqMMjrKj8GWwiHfguncQM7agj8WbV4l9UtctWah3AAx4Nx43STaJqEUuhhsVF1ZnEWSM5Nd29LqXcpCxfJLRzxtIFKnIukDOLlATHBEJFQEj1RZVtmDc1ZVgf+aKSgrxxcrZTlslFVjfqHmrVi8IjDsrqW/776mNUtbpd4/oD58UL80fQulrIbjQZ1hylbMZvpA9oJ3v/6jj3dV7CRRVsT+xXwJxpZt67HiXbdioLafsLz3X7xW6/E4bfZ97QoswzlGnXM0fNTRrv//Mro53bf8fc+LxUj/eIz81ww5OwlLZXzUYFlJfDGvcLbYNlR4J01MY091UhMX7jG0sZw92bw+Xzh835U/Z3v20p1iXCaCeOqq7GRnRMO0RkTkE8T8QkIX3jwuQOT+8l88dTdR+90bqg4OXESSNnVnySaeC/Nlvg0uswyw2rVGLJ7v0Z0/0n1PZGN/wERUFaU"></div>
 
 ```vue
 <script setup>
-const props = defineProps(['position']);
-const remove = (e) => e.target.remove();
+  const props = defineProps(['position']);
+  const style = {
+    left: `${props.position.x}px`,
+    top: `${props.position.y}px`,
+  };
+  const remove = (e) => e.target.remove();
 </script>
 <template>
-  <button :style="props.position" @click.stop="remove">X</button>
+  <button :style @click.stop="remove">X</button>
 </template>
 <style>
-button { position: absolute }
+  button { position: absolute }
 </style>
 ```
 
@@ -136,15 +138,15 @@ button { position: absolute }
 
 * Les composants importés sont automatiquement enregistrés localement
 
-<div data-external-example="https://play.vuejs.org/#eNp9kk1vnDAQhv/KyKoEK1H20J4oW7Wp9tCqaqO2h0ohUggMG2fBtmxDWCH+e8bmY5MoCifPvMM74/EzsK9KxV2LLGGpKTRXFgzaVn3OBG+U1BYG0FjBCJWWDQRUGqwS/XvRWivFLMbbNeM8g0+ZKKQwFpQ03HI6ws65hVfXG9JKWbQNChvnZbnv6PCTG4sCdRgUNS+OQQTh0EdwGjewo4HAf6tX3OV1i7FqzV04QI2VTeDm3dCPqr+JwErlw5MLYdy4hul2uiJ5UWCxUXVucXZOz7fp3ldS7zIWLr0iOOJpA1ycu2cMkiWAhGTYklG6feLKImYNLaDih/jeSEE7HlyvjBWyUbxG/VvNXgl4xWl5XcuHHz5ndYvRki/usDi+kr83vctl7FKjQd1hxlbN5vqAdpL3f39hT+dVbGTZ1lT9hvgHjaxbN+NUdtGKksZ+Uuen/e5x4OLwz+x7ekGzXMoN6ipHX58xguLbG1c/j/sh/uj/y8RIW3xG1SukzpBpqRxgJVZc4KWLwqtgeaPAIzdVamxkh1QaoiMLMJ46x5MQvmDlOSnp7QRJYuypRqLE942XPsTFF09vbAhBkifPjM2Y/U+3k8FLWlLvR4fZf1hZSyC/9e+AbiE0mC9k4yOK6kfL"></div>
+<div data-external-example="https://play.vuejs.org/#eNp9Uk1v1DAQ/SsjCylZaXEOcArZCor2AEJQAQekBqlpMtmmm9iW7YSsovx3xs7HttWqPtnz3ryZ8byBfVKKdy2ymCUm15WyYNC26ioVVaOktjCAxhJGKLVsICBqsEKUe91aK8UM8miNOM3gQypyKYwFJU1lK7rCzqmFt383hBUybxsUlmdFse/o8q0yFgXqMMjrKj8GWwiHfguncQM7agj8WbV4l9UtctWah3AAx4Nx43STaJqEUuhhsVF1ZnEWSM5Nd29LqXcpCxfJLRzxtIFKnIukDOLlATHBEJFQEj1RZVtmDc1ZVgf+aKSgrxxcrZTlslFVjfqHmrVi8IjDsrqW/776mNUtbpd4/oD58UL80fQulrIbjQZ1hylbMZvpA9oJ3v/6jj3dV7CRRVsT+xXwJxpZt67HiXbdioLafsLz3X7xW6/E4bfZ97QoswzlGnXM0fNTRrv//Mro53bf8fc+LxUj/eIz81ww5OwlLZXzUYFlJfDGvcLbYNlR4J01MY091UhMX7jG0sZw92bw+Xzh835U/Z3v20p1iXCaCeOqq7GRnRMO0RkTkE8T8QkIX3jwuQOT+8l88dTdR+90bqg4OXESSNnVnySaeC/Nlvg0uswyw2rVGLJ7v0Z0/0n1PZGN/wERUFaU"></div>
 
 ```vue [3, 10]
 <script setup>
   import { ref } from 'vue'
   import AppButton from './AppButton.vue';
   const positions = ref([]);
-  document.addEventListener('click', ({ x, y }) =>
-          positions.value.push({ left: `${x}px`, top: `${y}px` }));
+  document.addEventListener('click', ({x, y}) =>
+          positions.value.push({ x, y }));
 </script>
 
 <template>
