@@ -156,3 +156,17 @@
 .reveal-viewport.no-h4 h4 {
     display: none;
 }
+
+/* Use .has-error on code to replace highlights by a red underline */
+.reveal .hljs.has-highlights.has-error tr.highlight-line {
+    text-decoration: underline dotted red;
+}
+
+.reveal .hljs.has-highlights.has-error tr:not(.highlight-line) {
+    opacity: inherit;
+}
+
+/* Use .no-numbering on code to hide number, while still highlighting or underlining */
+.reveal .hljs.has-highlights.no-numbering tr td.hljs-ln-line.hljs-ln-numbers {
+    display: none;
+}
