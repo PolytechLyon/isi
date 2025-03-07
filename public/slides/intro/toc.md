@@ -1,9 +1,8 @@
 ## Plan des cours
 * [Développement front-end](#front-end-development)
-* [JavaScript : le langage](#js-language)
-* [JavaScript : la syntaxe](#js-syntax)
+* [JavaScript : langage et syntaxe](#js-language)
 * [Le Modèle Objet de Document](#dom)
-* [JavaScript : la syntaxe](#js-advances)
+* [JavaScript : notions avancées](#js-advanced)
 * [TypeScript](#typescript)
 * [Vue.js](#vuejs)
 * [Les outils](#tools)
