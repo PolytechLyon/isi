@@ -5,7 +5,8 @@
 <div class="fragment fade-out" data-fragment-index="1">
 
 * Un *composable* est une fonction qui maintient une logique à état.
-* Il permet la réutilisation de la même logique dans plusieurs compsants
+  * Réutilisation dans plusieurs composants
+  * Gestion d'état commun
 * Par convention, son nom commence par `use`.
 
 </div>
@@ -15,17 +16,19 @@
 Exemple : `useClickCoordinates()`
 
 ```javascript
-/**
- * Store mouse clicks in a reactive array.
- */
+const list = ref([]);
+const coordinates = readonly(list);
+
 function useClickCoordinates() {
-  const coordinates = ref([]);
-  function pop({ x, y }) {
-    coordinates.value.push({ x, y });
-  }
-  onMounted(() => document.addEventListener('click', pop));
-  onUnmounted(() => document.removeEventListener('click', pop));
-  return { coordinates };
+    function add({ x, y }) {
+        list.value.push(new Coordinare(x, y));
+    }
+    function remove({ key }) {
+        list.value = list.value.filter(c => c.key !== key);
+    }
+    onMounted(() => document.addEventListener('click', add));
+    onUnmounted(() => document.removeEventListener('click', add));
+    return { coordinates, remove };
 }
 ```
 
@@ -33,25 +36,42 @@ function useClickCoordinates() {
 
 <div class="fragment fade-in-then-out" data-fragment-index="2">
 
-Exemple : utilisation dans un composant
+Utilisation dans un composant
 
-```javascript [3]
-createApp({
-  setup() {
-    const { coordinates } = useClickCoordinates();
-    const toPosition = ({ x, y }) =>
-        ({ left: `${x}px`, top: `${y}px` });
-    const positions = computed(() =>
-        coordinates.value?.map(toPosition));
-    return { positions };
-  }
-}).mount('#app');
+```javascript [5]
+const AppButton = {
+    template: `<button :style @click.stop="remove">X</button>`,
+    props: ['coordinate'],
+    setup({ coordinate }) {
+        const { remove } = useClickCoordinates();
+        return {
+            style: coordinate.style,
+            remove: () => remove(coordinate),
+        };
+    }
+}
 ```
 
 
 </div>
 
-<div class="fragment fade-in" data-fragment-index="3">
+<div class="fragment fade-in-then-out" data-fragment-index="3">
+
+Ou un autre
+
+```javascript [3]
+createApp({
+    setup() {
+        const { coordinates } = useClickCoordinates();
+        return { coordinates };
+    }
+})
+```
+
+
+</div>
+
+<div class="fragment fade-in" data-fragment-index="4">
 
 Résultat
 
