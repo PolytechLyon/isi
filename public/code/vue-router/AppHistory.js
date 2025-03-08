@@ -1,5 +1,4 @@
 import useClickCoordinates from "./useClickCoordinates.js";
-import AppButton from "./AppButton.js";
 
 function style({ removed }) {
     return {
@@ -19,9 +18,6 @@ const AppHistory = {
     setup() {
         const { history } = useClickCoordinates();
         return { history, style };
-    },
-    components: {
-        'app-button': AppButton,
     },
 }
 
