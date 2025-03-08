@@ -1,0 +1,28 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pop VueJS</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div id="app">
+    <div>
+      <router-link to="/">Home</router-link> | <router-link to="/history">History</router-link>
+    </div>
+    <div>
+      <router-view />
+    </div>
+  </div>
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="https://unpkg.com/vue-router@4"></script>
+  <script src="script.js" type="module"></script>
+
+</body>
+
+</html>

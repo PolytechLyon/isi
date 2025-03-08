@@ -5,4 +5,5 @@
 * [JavaScript : notions avancées](#js-advanced)
 * [TypeScript](#typescript)
 * [Vue.js](#vuejs)
+* [Vue Router](#router)
 * [Les outils](#tools)
