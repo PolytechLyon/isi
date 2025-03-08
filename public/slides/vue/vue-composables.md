@@ -18,17 +18,16 @@ Exemple : `useClickCoordinates()`
 ```javascript
 const list = ref([]);
 const coordinates = readonly(list);
+function add({ x, y, target }) {
+  list.value.push(new Coordinate(x, y));
+}
+function remove({ key }) {
+  list.value = list.value.filter(c => c.key !== key);
+}
+document.addEventListener('click', add);
 
-function useClickCoordinates() {
-    function add({ x, y }) {
-        list.value.push(new Coordinare(x, y));
-    }
-    function remove({ key }) {
-        list.value = list.value.filter(c => c.key !== key);
-    }
-    onMounted(() => document.addEventListener('click', add));
-    onUnmounted(() => document.removeEventListener('click', add));
-    return { coordinates, remove };
+export default function useClickCoordinates() {
+  return { coordinates, remove };
 }
 ```
 
@@ -40,15 +39,15 @@ Utilisation dans un composant
 
 ```javascript [5]
 const AppButton = {
-    template: `<button :style @click.stop="remove">X</button>`,
-    props: ['coordinate'],
-    setup({ coordinate }) {
-        const { remove } = useClickCoordinates();
-        return {
-            style: coordinate.style,
-            remove: () => remove(coordinate),
-        };
-    }
+  template: `<button :style @click.stop="remove">X</button>`,
+  props: ['coordinate'],
+  setup({ coordinate }) {
+    const { remove } = useClickCoordinates();
+    return {
+      style: coordinate.style,
+      remove: () => remove(coordinate),
+    };
+  }
 }
 ```
 
@@ -60,12 +59,15 @@ const AppButton = {
 Ou un autre
 
 ```javascript [3]
-createApp({
-    setup() {
-        const { coordinates } = useClickCoordinates();
-        return { coordinates };
-    }
-})
+const App = {
+  setup() {
+    const { coordinates } = useClickCoordinates();
+    return { coordinates };
+  },
+  components: {
+    'app-button': AppButton,
+  }
+}
 ```
 
 
