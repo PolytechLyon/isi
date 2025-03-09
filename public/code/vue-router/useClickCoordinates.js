@@ -32,8 +32,7 @@ function remove(coordinate) {
 document.addEventListener('click', add);
 
 /**
- * Store mouse clicks in a reactive array.
- * @returns {{coordinates: { x: number, y: number }}}
+ * Manage mouse clicks and their history in a reactive way.
  */
 export default function useClickCoordinates() {
     return { coordinates, history, remove };
