@@ -9,9 +9,6 @@
   * prépare un objet spécial, `this`
 * Nom en PascalCase, par convention
 
-<img class="r-stretch"></img>
-
-
 </div>
 <div class="fragment fade-in-then-out" data-fragment-index="1">
 
