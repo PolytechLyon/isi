@@ -156,32 +156,6 @@ export default {
 
 </div>
 
-<div class="fragment fade-in-then-out">
-
-* Support pour TypeScript avec `lang="ts"`
-
-<div data-external-example="https://play.vuejs.org/#eNqNU2Fr2zAQ/SuHGcQBT/mwfXKdsHUEttFtpe2HQV2o65xTt7YkJDlzMP7vO0mx43SlLBBj6d69u3v33AWfpWS7BoM4SHSuSmmgyvh2mQZGpwFoNI1cpbyspVAGOlBYRHCFBfRQKFHDjHJnY5zIzhtjBD8E2WK8sUVmZxOmS6FLUxJ0YGILs5eoLSjlueDagDxgdGxrJkPK7d0KlraV8PZu7uAbkTc1csOyzWa9o5eLUhvkqMJZXpX58yyCsGsj2PdzWK6OvGyXVQ0y2ejHsAMLgH5uKZOFV4Nmp4PBWlaZQToB/ZLjnLv3hVCkVjhQRvCM+zmU/FiEdIyHA8QUhgURJYsJaxCR3jRzUW7Zkxac1tHZWmmQi1qWFapf8sAVg4vYWFZV4s93d2dUg9Fwnz9i/vzK/ZNu7V0aXCrUqHaYBmPMZGqLxofX1z+xpfcxWItNUxH6jeAValE1tkcPO2/4htqe4Fy339z6S7690euWNqSHoWyjFtk7fBqQXb68Mfqx3Q/so8tLeU8qnvjtf009+CqCa7Ov8B9HjnZUQmpy3gaLkuOlPSXduOd4YulVaE3ks7TljA/USz9ChYWJ4f5d5yjZQMHaXrb3TgEj5GuA/QHQj/QKa7GzxCEVcd53Fg+ReY0g0/D15sfFukL7hcyZT3ANTlx+6vHkwds7ds3DJ/cRMU1NkYieIA1Wv5OFx720c+LS6OVAMxUpe3BGIZVdfQe09rdKM6NpZ9i6vdibo6RWOGVba2PgTf2A6syf9yfn3j7sf0pylN5ljOL7PK+oiwyivwj0Z0H/F8FUym8="></div>
-
-```vue
-<script lang="ts" setup>
-  import { Position, Style } from './types'
-  const props = defineProps<{ position: Position }>();
-  const style: Style = {
-    left: `${props.position.x}px`,
-    top: `${props.position.y}px`,
-  };
-  const remove = (e: Event) => (e.target as HTMLElement).remove();
-</script>
-<template>
-  <button :style @click.stop="remove">X</button>
-</template>
-<style>
-  button { position: absolute }
-</style>
-```
-
-</div>
-
 <div class="fragment fade-in">
 
 * Avantage
@@ -189,7 +163,6 @@ export default {
   * Gabarits compilés en avance
   * Style avec portée limitée au composant
   * Enregistrement optimisé des composants
-  * Support pour TypeScript
 * Inconvénients
   * Phase de compilation obligatoire
 
