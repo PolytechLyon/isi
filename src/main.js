@@ -33,7 +33,7 @@ function createDemoFrame(element) {
         ${frame}
         <div class="icons">
             <a
-                href='https://github.com/PolytechLyon/isi1/tree/master/public/code/${example}'
+                href='https://github.com/PolytechLyon/isi/tree/master/public/code/${example}'
                 class="icon"
                 target="_blank">
                     <img src="images/github.svg" alt="GitHub"/>
