@@ -56,7 +56,7 @@ const sum = f(1, 2);        // appel (invocation)
 ```
 
 </div>
-<div class="fragment" data-fragment-index="4">
+<div class="fragment fade-in-then-out" data-fragment-index="4">
 
 * La déclaration est hissée en haut de la portée
 
@@ -77,4 +77,21 @@ const sum = f(1, 2);        // appel uniquement après déclaration
 ```
 
 </div>
+
+<div class="fragment">
+
+* Les **fonctions fléchées** : Syntaxe simplifiée
+* Permet d'écrire une fonction sur une seule ligne
+    ```javascript
+    const f = (a, b) => a + b;
+    const sum = f(1, 2);
+    ```
+* Ou non
+    ```javascript
+    const f = (a, b) => {
+      return a + b;
+    }
+    ```
+</div>
+
 </div>
