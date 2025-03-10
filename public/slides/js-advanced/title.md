@@ -1,5 +1,5 @@
 ### JavaScript
-## **Concepts avancés**
+## **Notions avancées**
 
 * Les objets
 * Les prototypes
