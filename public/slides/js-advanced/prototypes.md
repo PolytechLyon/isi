@@ -19,10 +19,10 @@ obj.toString(); // Cela marche !
 <div class="fragment fade-in-then-out" data-fragment-index="1">
 
 
-* En JavaScript, chaque objet a un prototype
-  * Le prototype est simplement un autre objet
-  * Il peut être nul
-  * Il a, en tant qu'objet, un prototype (peut-être nul)
+* En JavaScript, chaque objet a un prototype :
+  * qui est un autre objet,
+  * éventuellement nul
+* Un prototype non nul possède, en tant qu'objet, un prototype, éventuellement nul
 * On parle de la **chaîne de prototype**
 
 
