@@ -34,11 +34,11 @@ obj.toString(); // Cela marche !
 
 ```javascript fix
 const prototype = Object.getPrototypeOf({});
-typeof prototype;           // object
-typeof prototype.toString;  // function
+console.log(typeof prototype);           // object
+console.log(typeof prototype.toString);  // function
 ```
 
-* Le prototype peut être stocké dans la propriété `__proto__` *par convention*
+* *Par convention*, le prototype est stocké dans la propriété, non standardisée, `__proto__` 
 
 </div>
 
