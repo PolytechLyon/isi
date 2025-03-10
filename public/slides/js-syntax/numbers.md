@@ -10,6 +10,8 @@
 console.log(1 / 0 === Infinity);     // true
 console.log(0 / 0);                  // NaN
 console.log(0 / 0 === NaN);          // false
+console.log(0 === -0);               // true
+console.log(1 / 0 === 1 / -0);       // false
 console.log(NaN !== NaN);            // true
 console.log(isNaN(0 / 0));           // true
 ```
