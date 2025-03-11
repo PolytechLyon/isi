@@ -6,14 +6,15 @@
 
 * Un constructeur est une fonction qui :
   * ne contient pas de retour explicite
-  * prépare un objet spécial, `this`
+  * prépare un objet spécial, référencé par `this`
 * Nom en PascalCase, par convention
 
 </div>
 <div class="fragment fade-in-then-out" data-fragment-index="1">
 
 * Un constructeur est appelé avec le mot-clé `new`
-* Implicitement, un objet `this` est créé au début de l'exécution, et envoyé au code appelant à la fin
+* Implicitement, un objet est créé et renvoyé
+* `this` référence cet objet dans le constructeur
 
 ```javascript
 function Person(firstname, lastname) {
@@ -29,8 +30,8 @@ const person = new Person('John', 'Smith');
 
 <div class="fragment fade-in-then-out" data-fragment-index="2">
 
-* Le constructeur a une propriété `prototype`, dont la valeur est un objet
-* Cet objet est assigné en tant que prototype de `this`
+* Le constructeur a une propriété `prototype`
+* Si objet, `prototype` sera assigné en tant que prototype de `this` au lieu de `Object.prototype`
 
 ```javascript []
 function Person(name) {
@@ -39,7 +40,7 @@ function Person(name) {
 Person.prototype.greet = function() {
   console.log(`Hello ${this.name}`);
 }
-const person = new Person('John', 'Smith');
+const person = new Person('John');
 Person.prototype === Object.getPrototypeOf(person); // true
 person.greet();                                     // Hello John 
 ```
