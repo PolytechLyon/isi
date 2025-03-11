@@ -30,6 +30,14 @@ obj.toString(); // Cela marche !
 
 <div class="fragment fade-in-then-out" data-fragment-index="2">
 
+* Lorsqu'une propriété est accédée, par sa clé, sur un objet, l'objet est d'abord cherché pour une propriété de la même clé
+* Si une telle propriété n'est pas trouvée, la chaîne de prototype est cherché, en partant de l'objet même
+* Jusqu'à ce qu'une propriété de la même clé soit trouvée, ou un prototype nul soit rencontrée
+
+</div>
+
+<div class="fragment fade-in-then-out" data-fragment-index="3">
+
 * La méthode `Object.getPrototypeOf()` détermine le prototype d'un objet
 
 ```javascript fix
@@ -38,16 +46,7 @@ console.log(typeof prototype);           // object
 console.log(typeof prototype.toString);  // function
 ```
 
-* *Par convention*, le prototype est stocké dans la propriété, non standardisée, `__proto__` 
-
-</div>
-
-<div class="fragment fade-in-then-out" data-fragment-index="3">
-
-* Lorsqu'une propriété est accédée, par sa clé, sur un objet, l'objet est d'abord cherché pour une propriété de la même clé
-* Si une telle propriété n'est pas trouvée, la chaîne de prototype est cherché, en partant de l'objet même
-* Jusqu'à ce qu'une propriété de la même clé soit trouvée, ou un prototype nul soit rencontrée
-
+* *Par convention*, le prototype est stocké dans la propriété, non standardisée, `__proto__`
 
 </div>
 
