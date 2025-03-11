@@ -27,16 +27,15 @@ En JavaScript
 ```javascript []
 function Rectangle(x, y) { this.x = x; this.y = y; }
 Rectangle.prototype = {
+  dimension: 2,
   area() { return this.x * this.y; },
   toString() { return `[${this.x} * ${this.y}]`; },
 };
 function Square(x) { Rectangle.call(this, x, x); }
 Square.prototype = Object.create(Rectangle.prototype);
 Square.prototype.toString = function() { return `[${this.x}²]`; };
-const shapes = [new Rectangle(2, 3), new Square(2)];
-for (const shape of shapes) {
-  console.log(shape.toString(), shape.area());
-}
+[new Rectangle(2, 3), new Square(2)].forEach(shape =>
+    console.log(shape.toString(), shape.area()));
 ```
 
 <div class="r-stack">
