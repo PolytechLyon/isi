@@ -27,25 +27,27 @@ En JavaScript
 ```javascript []
 function Rectangle(x, y) { this.x = x; this.y = y; }
 Rectangle.prototype = {
-  dimension: 2,
   area() { return this.x * this.y; },
+  toString() { return `[${this.x} * ${this.y}]`; },
 };
-function Square(x) { this.x = x; }
+function Square(x) { Rectangle.call(this, x, x); }
 Square.prototype = Object.create(Rectangle.prototype);
-Square.prototype.area = function () { return this.x * this.x; };
-const rectangle = new Rectangle(2, 3);
-const square = new Square(2);
+Square.prototype.toString = function() { return `[${this.x}²]`; };
+const shapes = [new Rectangle(2, 3), new Square(2)];
+for (const shape of shapes) {
+  console.log(shape.toString(), shape.area());
+}
 ```
 
 <div class="r-stack">
 <div class="fragment fade-out" data-fragment-index="3">
 
-* `square` hérite de `rectangle`
-* Méthode polymorphique `area()`
+* `Square` hérite de `Rectangle`
+* Méthode polymorphique `toString()`
 
 </div>
 <div class="fragment fade-in" data-fragment-index="3">
-Le code est difficile à maintenir !
+Néanmoins, le code est difficile à maintenir !
 </div>
 </div>
 </div>
