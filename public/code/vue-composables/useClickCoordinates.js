@@ -1,4 +1,4 @@
-const { ref, readonly, computed } = Vue;
+const { ref, readonly } = Vue;
 
 class Coordinate {
     constructor(x, y) {
@@ -19,7 +19,7 @@ class Coordinate {
 const list = ref([]);
 const coordinates = readonly(list);
 
-function add({ x, y, target }) {
+function add({ x, y }) {
     list.value.push(new Coordinate(x, y));
 }
 function remove({ key }) {

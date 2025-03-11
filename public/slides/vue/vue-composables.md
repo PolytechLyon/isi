@@ -18,7 +18,7 @@ Exemple : `useClickCoordinates()`
 ```javascript
 const list = ref([]);
 const coordinates = readonly(list);
-function add({ x, y, target }) {
+function add({ x, y }) {
   list.value.push(new Coordinate(x, y));
 }
 function remove({ key }) {
