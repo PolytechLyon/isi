@@ -12,7 +12,7 @@
 
 <div class="fragment fade-in-then-out" data-fragment-index="1">
 
-* Un composant Vue peut avoir :
+* Un composant Vue est un objet qui peut avoir :
   * Un gabarit (propriété `template`)
   * Une logique (méthode `setup()`)
   * Un ensemble d'attributs (propriété `props`)
@@ -20,15 +20,33 @@
 
 </div>
 
-<div class="fragment fade-in-then-out" data-fragment-index="2">
+<div class="fragment fade-in" data-fragment-index="2">
+<div class="fragment fade-out" data-fragment-index="4">
 
-* Accessibles depuis le gabarit sont :
-  * Les propriétés `props` de composant
+<div class="r-stack">
+
+<div class="fragment fade-out" data-fragment-index="3">
+
+**Exemple**
+</div>
+
+<div class="fragment fade-in" data-fragment-index="3">
+
+* Accessibles depuis le gabarit ce sont :
+  * Les attributs `props` de composant
   * Les éléments de l'objet de retour de `setup()`
+</div>
 
-```
+</div>
+
+<pre><code
+  class="javascript language-javascript"
+  data-trim
+  data-noescape
+  data-line-numbers="|2,3,6"
+  data-fragment-index="3">
 const AppButton = {
-  template: '<button :style="position" @click.stop="remove">X</button>',
+  template: '&lt;button :style="position" @click.stop="remove">X&lt;/button>',
   props: ['position'],                    // lié au style
   setup() {
     return {
@@ -36,23 +54,23 @@ const AppButton = {
     };
   }
 }
-```
-
+</code></pre>
 
 </div>
+</div>
 
-<div class="fragment fade-in" data-fragment-index="3">
-<div class="fragment fade-out" data-fragment-index="5">
+<div class="fragment fade-in" data-fragment-index="4">
+<div class="fragment fade-out" data-fragment-index="6">
 
-* Le composant est enregistré auprès de l'application, ou les composants qui l'utilisent.
-* L'application Vue est le composant racine. <!-- .element class="fragment" data-fragment-index="4"  -->
+* Le composant est enregistré auprès de l'application, ou auprès des composants qui l'utilisent.
+* L'application Vue est le composant racine. <!-- .element class="fragment" data-fragment-index="5"  -->
 
 <pre><code
   class="javascript language-javascript"
   data-trim
   data-noescape
   data-line-numbers="10|2-9"
-  data-fragment-index="4">
+  data-fragment-index="5">
 const { createApp, ref } = Vue;
 createApp({
   setup() {
@@ -69,12 +87,12 @@ createApp({
 </div>
 </div>
 
-<div class="fragment fade-in" data-fragment-index="5">
-<div class="fragment fade-out" data-fragment-index="8">
+<div class="fragment fade-in" data-fragment-index="6">
+<div class="fragment fade-out" data-fragment-index="9">
 
 <div class="r-stack">
 
-<div class="fragment fade-out" data-fragment-index="6">
+<div class="fragment fade-out" data-fragment-index="7">
 
 * Une fois enregistré, le composant peut être utilisé dans les gabarits d'autres composants.
 
@@ -88,9 +106,9 @@ createApp({
 ```
 </div>
 
-<div class="fragment fade-in-then-out" data-fragment-index="6">
+<div class="fragment fade-in-then-out" data-fragment-index="7">
 
-* Les attributs sont passés ainsi `:nom="valeur"`
+* Les attributs passent de père en fils `:nom="valeur"`
 
 ``` [2-5]
   <div id="app">
@@ -102,7 +120,7 @@ createApp({
 ```
 </div>
 
-<div class="fragment fade-in" data-fragment-index="7">
+<div class="fragment fade-in" data-fragment-index="8">
 
 * Syntaxe simplifiée `:nom` pour `:nom="nom"`
 
@@ -121,7 +139,7 @@ createApp({
 </div>
 </div>
 
-<div class="fragment fade-in-then-out" data-fragment-index="8">
+<div class="fragment fade-in-then-out" data-fragment-index="9">
 
 Résultat
 
@@ -130,7 +148,7 @@ Résultat
 
 </div>
 
-<div class="fragment fade-in-then-out" data-fragment-index="9">
+<div class="fragment fade-in-then-out" data-fragment-index="10">
 
 * Un composant peut émettre des événements
 
@@ -150,7 +168,7 @@ const AppButton = {
 
 </div>
 
-<div class="fragment fade-in-then-out" data-fragment-index="10">
+<div class="fragment fade-in-then-out" data-fragment-index="11">
 
 * Le composant parent peut réagir à ces événements
 
@@ -168,7 +186,7 @@ const AppButton = {
 
 </div>
 
-<div class="fragment fade-in-then-out" data-fragment-index="11">
+<div class="fragment fade-in-then-out" data-fragment-index="12">
 
 Résultat
 
@@ -178,7 +196,7 @@ Résultat
 </div>
 
 
-<div class="fragment fade-in-then-out" data-fragment-index="12">
+<div class="fragment fade-in-then-out" data-fragment-index="13">
 
 * Crochet de cycle de vie de composant
 
@@ -195,7 +213,7 @@ setup() {
 ```
 </div>
 
-<div class="fragment fade-in-then-out" data-fragment-index="13">
+<div class="fragment fade-in-then-out" data-fragment-index="14">
 
 Résultat
 
