@@ -19,8 +19,9 @@ createApp({
             positions.value.push({ x, y, key: `${x},${y}` }));
         return {
             positions,
-            remove: (key) => positions.value = positions.value
-                .filter(p => p.key !== key),
+            remove(key) {
+                positions.value = positions.value.filter(p => p.key !== key);
+            },
         };
     }
 })
