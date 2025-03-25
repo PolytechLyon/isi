@@ -1,11 +1,5 @@
 import useClickCoordinates from "./useClickCoordinates.js";
 
-function style({ removed }) {
-    return {
-        'text-decoration': removed ? 'line-through' : undefined,
-    }
-}
-
 const AppHistory = {
     template: `
       <h2>History</h2>
@@ -17,7 +11,7 @@ const AppHistory = {
     `,
     setup() {
         const { history } = useClickCoordinates();
-        return { history, style };
+        return { history };
     },
 }
 
