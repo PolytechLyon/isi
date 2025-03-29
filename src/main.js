@@ -87,7 +87,8 @@ function createCodeIcons(element) {
     const externalExample = element
         .parentElement
         .previousElementSibling?.getAttribute('data-external-example');
-    const isSnippet = !!element.closest(".javascript");
+    const snippet = element.closest(".javascript");
+    const isRunnable = snippet && !snippet.classList.contains('not-runnable');
     const externalLink = externalExample ? `<a
                 href='${externalExample}'
                 target="_blank">
@@ -95,7 +96,7 @@ function createCodeIcons(element) {
                     src="images/view.svg"
                     alt="Exemple extèrne" />
         </a>` : '';
-    const evalButton = isSnippet ? `<a
+    const evalButton = isRunnable ? `<a
                 class="eval-icon no-print">
                 <img src="images/play.svg" alt="Évaluer" />
         </a>` : '';
