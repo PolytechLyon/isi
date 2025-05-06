@@ -7,7 +7,7 @@
 <div class="r-stack">
 
 <div class="fragment fade-out" data-fragment-index="1">
-Une classe permet de réaliser l'orienté objet <br /> d'une manière plus simple
+Une classe permet de réaliser l'OOP plus simplement
 </div>
 
 <ul class="r-stack fragment fade-in" data-fragment-index="1">
