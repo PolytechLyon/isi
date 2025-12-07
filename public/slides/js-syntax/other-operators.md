@@ -48,9 +48,9 @@ person1.print?.();              // John
 person3.print?.();              // udefined
 ```
 
-``` fix error
-console.log(person2.name);      // TypeError
-person3.print()                 // TypeError
+```fix has-error[1,2] no-numbering
+console.log(person2.name);
+person3.print();
 ```
 </div>
 
