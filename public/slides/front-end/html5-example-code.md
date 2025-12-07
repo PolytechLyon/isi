@@ -17,7 +17,7 @@
   &lt;h1&gt;Une page &lt;span id="adjective"&gt;...&lt;/span&gt;&lt;/h1&gt;
   &lt;script&gt;
    let i = 0;
-   const adj = ['structrée', 'stylée', 'dynamique'];
+   const adj = ['structurée', 'stylée', 'dynamique'];
    const el = document.getElementById('adjective');
    setInterval(() =&gt; el.innerText = adj[i++ % 3], 500);
   &lt;/script&gt;

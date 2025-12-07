@@ -5,11 +5,11 @@
 
 ```javascript
 const rectangle = {
-  heigh: 30,
+  height: 30,
   width: 60,
   transpose() {
-      const width = this.heigh;
-      this.heigh = this.width;
+      const width = this.height;
+      this.height = this.width;
       this.width = width;
   }
 }

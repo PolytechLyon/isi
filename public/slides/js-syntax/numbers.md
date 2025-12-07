@@ -4,7 +4,7 @@
 
 <div class="fragment fade-out" data-fragment-index="1">
 
-* Les chiffres en JavaScript sont des réels (flottant) sur 8 octets (double précision)
+* Les nombres en JavaScript sont des réels (flottant) sur 8 octets (double précision)
 * Chiffres spéciaux : `Infinity`, `NaN`
 ```javascript
 console.log(1 / 0 === Infinity);     // true

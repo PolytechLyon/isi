@@ -1,4 +1,4 @@
-### Les chaînes caractères
+### Les chaînes de caractères
 
 <div class="r-stack">
 
@@ -33,12 +33,12 @@ console.log(greeting);
 
 <div class="fragment">
 
-* Les chaînes caractères sont immutables
+* Les chaînes de caractères sont immutables
 * Différents opérations et opérateurs possibles
 
 ```javascript
 const str = 'Hello World';
-console.log(str + '!');             // Hello Word!
+console.log(str + '!');             // Hello World!
 console.log(str.length);            // 11
 console.log(str[4]);                // o
 console.log(str.split(' '));        // ['Hello', 'World']

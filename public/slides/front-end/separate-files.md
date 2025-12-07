@@ -31,7 +31,7 @@ h1 { color: maroon; }
     <pre data-fragment-index="3" class="fragment">
         <code data-trim data-noescape data-line-numbers>
 let i = 0;
-const adjectives = ['structrée', 'stylée', 'dynamique'];
+const adjectives = ['structurée', 'stylée', 'dynamique'];
 const el = document.getElementById('adjective');
 setInterval(() => el.innerText = adjectives[i++ % 3], 1000);
         </code>

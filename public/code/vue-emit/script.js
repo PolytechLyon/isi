@@ -3,7 +3,7 @@ const { createApp, ref } = Vue;
 const AppButton = {
     template: `<button :style @click.stop="remove">X</button>`,
     props: ['position'],
-    emit: ['remove'],
+    emits: ['remove'],
     setup({ position }, { emit }) {
         return {
             style: { left: `${position.x}px`, top: `${position.y}px` },

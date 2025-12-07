@@ -1,4 +1,4 @@
-### Le language
+### Le langage
 
 <div class="r-stack">
 

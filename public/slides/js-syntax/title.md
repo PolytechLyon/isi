@@ -2,7 +2,7 @@
 ## **La syntaxe**
 
 * Déclarations
-* Chiffres et chaînes caractère
+* Nombres et chaînes de caractères
 * Comparaisons
 * Structures de contrôle
 * Fonctions

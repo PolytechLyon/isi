@@ -5,7 +5,7 @@
             <span class="fragment fade-out" data-fragment-index="1">HTML 5</span>
             <span class="fragment" data-fragment-index="1">Structure</span>
         </div>
-        <img src="images/HTML5_logo.svg" alt="CSS3 Logo" />
+        <img src="images/HTML5_logo.svg" alt="HTML5 Logo" />
     </span>
     <span style="width: 30%" class="vertical-center">
         <div class="r-stack">
@@ -19,6 +19,6 @@
             <span class="fragment fade-out" data-fragment-index="1">JavaScript</span>
             <span class="fragment" data-fragment-index="1">Fonction</span>
         </div>
-        <img src="images/JavaScript_logo.svg" alt="CSS3 Logo" />
+        <img src="images/JavaScript_logo.svg" alt="JavaScript Logo" />
     </span>
 </div>

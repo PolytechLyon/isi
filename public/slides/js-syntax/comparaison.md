@@ -25,7 +25,7 @@ console.log('' === false);         // false
 * Test d'inégalité stricte (valeur ou type) avec `!==`
 ```javascript fix
 console.log(42 != '42');           // false 
-console.log(42 !== '42');          // ture
+console.log(42 !== '42');          // true
 console.log(42 !== 42);            // false
 console.log('42' !== '42');        // false
 console.log(null != undefined);    // false
@@ -39,7 +39,7 @@ console.log('' !== false);         // true
 <div class="fragment">
 
 * Comparaison d'inégalité `<`, `>`, `<=`, `>=`
-* Entre deux chiffres ou deux chaînes de caractères
+* Entre deux nombres ou deux chaînes de caractères
 
 ```javascript fix
 console.log(42 > 13);                    // true 

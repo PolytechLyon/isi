@@ -5,7 +5,7 @@
 <div class="fragment fade-out" data-fragment-index="1">
 
 * Opérateur `typeof` pour déterminer le type d'une expression :
-  `number`, `string`, `boolean`, `bigin`, `function`, `object`, `symbol` ou `undefined`
+  `number`, `string`, `boolean`, `bigint`, `function`, `object`, `symbol` ou `undefined`
 
 ```javascript
 console.log(typeof 42);                  // number 
@@ -45,7 +45,7 @@ const person3 = { name: 'John' };
 console.log(person1?.name);     // John
 console.log(person2?.name);     // undefined
 person1.print?.();              // John
-person3.print?.();              // udefined
+person3.print?.();              // undefined
 ```
 
 ```fix has-error[1,2] no-numbering
