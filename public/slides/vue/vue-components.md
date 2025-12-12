@@ -13,10 +13,10 @@
 <div class="fragment fade-in-then-out" data-fragment-index="1">
 
 * Un composant Vue est un objet qui peut avoir :
-  * Un gabarit (propriété `template`)
-  * Une logique (méthode `setup()`)
-  * Un ensemble d'attributs (propriété `props`)
-  * Un ensemble d'événements (propriété `emits`)
+  * 📝 Un gabarit (propriété `template`)
+  * 🧠 Une logique (méthode `setup()`)
+  * ⤵️ Un ensemble d'attributs (propriété `props`)
+  * ⤴️ Un ensemble d'événements (propriété `emits`)
 
 </div>
 
