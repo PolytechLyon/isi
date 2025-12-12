@@ -1,26 +1,28 @@
 const { createApp, ref } = Vue;
 
+let lastKey = 0;
+
 const AppButton = {
     template: `<button :style @click.stop="remove">X</button>`,
-    props: ['position'],
+    props: ['coordinate'],
     emits: ['remove'],
-    setup({ position }, { emit }) {
+    setup({ coordinate }, { emit }) {
         return {
-            style: { left: `${position.x}px`, top: `${position.y}px` },
-            remove: () => emit('remove', position.key),
+            style: { left: `${coordinate.x}px`, top: `${coordinate.y}px` },
+            remove: () => emit('remove', coordinate.key),
         };
     }
 }
 
 createApp({
     setup() {
-        const positions = ref([]);
+        const coordinates = ref([]);
         document.addEventListener('click', ({ x, y }) =>
-            positions.value.push({ x, y, key: `${x},${y}` }));
+            coordinates.value.push({ x, y, key: lastKey++ }));
         return {
-            positions,
-            remove(key) {
-                positions.value = positions.value.filter(p => p.key !== key);
+            coordinates,
+            removeCoordinate(key) {
+                coordinates.value = coordinates.value.filter(p => p.key !== key);
             },
         };
     }

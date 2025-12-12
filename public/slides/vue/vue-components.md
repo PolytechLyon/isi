@@ -154,15 +154,15 @@ Résultat
 
 ```javascript [4,8]
 const AppButton = {
-    template: `<button :style @click.stop="remove">X</button>`,
-    props: ['position'],
-    emit: ['remove'],
-    setup({ position }, { emit }) {
-        return {
-            style: { left: `${position.x}px`, top: `${position.y}px` },
-            remove: () => emit('remove', position.key),
-        };
-    }
+  template: `<button :style @click.stop="remove">X</button>`,
+  props: ['coordinate'],
+  emits: ['remove'],
+  setup({ coordinate }, { emit }) {
+    return {
+      style: { left: `${coordinate.x}px`, top: `${coordinate.y}px` },
+      remove: () => emit('remove', coordinate.key),
+    };
+  }
 }
 ```
 
@@ -173,9 +173,9 @@ const AppButton = {
 * Le composant parent peut réagir à ces événements
 
 ```javascript [4,8]
-    <app-button v-for="position in positions"
-                @remove="remove"
-                :position :key="position.key" />
+    <app-button v-for="coordinate in coordinates"
+                @remove="removeCoordinate"
+                :coordinate :key="coordinate.key" />
 ```
 
 <aside class="notes">

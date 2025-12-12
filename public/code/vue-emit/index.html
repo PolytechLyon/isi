@@ -12,9 +12,9 @@
 <body>
 
   <div id="app">
-    <app-button v-for="position in positions"
-                @remove="remove"
-                :position :key="position.key" />
+    <app-button v-for="coordinate in coordinates"
+                @remove="removeCoordinate"
+                :coordinate :key="coordinate.key" />
   </div>
   <script src="https://unpkg.com/vue@3"></script>
   <script src="script.js"></script>
