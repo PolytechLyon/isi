@@ -1,7 +1,7 @@
 ### Langage orienté objet
 * Support de POO basé sur les **prototypes**
-* On peut créer des objets sans classes
-* Permet la programmation procédurale
+* Non classique : on peut créer des objets sans classes
+* Non pur : permet la programmation procédurale
 
 ```javascript
 const rectangle = {
