@@ -6,7 +6,7 @@
 ```javascript fix
 console.log('one');
 setTimeout(() => console.log('two'), 0); // zéro attente
-alert();                                 // rare appel bloquant
+alert();     // appel bloquant, généralement déconseillé 
 console.log('three');
 ```
 
