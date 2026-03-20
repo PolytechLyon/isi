@@ -4,10 +4,10 @@
 * Syntaxe familière (Java, C)
 
 ```javascript
-    let hours = new Date().getHours();
-    if (hours < 12) {
-        console.log('Bonjour');
-    } else {
-        console.log('Bonsoir');
-    }
+let hours = new Date().getHours();
+if (hours < 12) {
+    console.log('Bonjour');
+} else {
+    console.log('Bonsoir');
+}
 ```
