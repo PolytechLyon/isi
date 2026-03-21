@@ -1,7 +1,13 @@
 @import "reveal.js/dist/reset.css";
 @import "reveal.js/dist/reveal.css";
-@import "reveal.js/dist/theme/dracula.css";
+@import "reveal.js/dist/theme/solarized.css";
 @import "reveal.js/plugin/highlight/monokai.css";
+
+:root {
+    --r-heading-color: #d33682;
+
+    --isi-frame-border-color: var(--r-link-color-dark);
+}
 
 .space-around {
     display: flex;
@@ -85,6 +91,12 @@
             width: 15px;
             margin: 8px;
         }
+    }
+}
+
+.reveal section [data-code-example] {
+    .frame {
+        border: 1px solid var(--isi-frame-border-color);
     }
 }
 
