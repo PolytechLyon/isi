@@ -35,7 +35,7 @@ const message = 'Bonjour';
 ```javascript
 x = 0;                      // Possible car déclaration hissée
 var x;
-var obj = { taille: x++ };    // Déclaration est initialisation
+var obj = { taille: x++ };  // Déclaration est initialisation
 ```
 
 </div>

@@ -141,9 +141,16 @@
     }
 }
 
-/* avoid fake bold on some browsers */
 .reveal strong {
+    /* avoid fake bold on some browsers */
     font-weight: inherit;
+    color: var(--r-link-color-hover);
+}
+
+.reveal code {
+    /* avoid fake bold on some browsers */
+    font-weight: inherit;
+    color: var(--r-link-color-dark);
 }
 
 #eval-console {
