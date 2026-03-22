@@ -1,5 +1,6 @@
-### Non concurrent
-* Un seul fil d'exécution par contexte global (realm)
+### Exécusion monothread
+* Un seul fil d'exécution par agent
+* Tâches traitées complétement et sans interruption
 * Appels asynchrones possibles
   * En utilisant des fonctions de rappel (callbacks)
 
@@ -15,6 +16,13 @@ console.log('three');
   three
   two
 </code></pre>
+
+
+<aside class="notes">
+
+  * Run-to-completion
+
+</aside>
 
 
 

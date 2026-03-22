@@ -9,7 +9,7 @@
 * ~Interprété~ **Transpilé**
 * ~Typage faible et dynamique~ **Typage fort et statique**
 * Orienté-objet
-* Non concurrent
+* Monothread
 
 </div>
 

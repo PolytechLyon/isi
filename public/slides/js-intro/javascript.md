@@ -5,4 +5,4 @@
 * Interprété
 * Typage faible et dynamique
 * Orienté-objet
-* Non concurrent
+* Monothread
