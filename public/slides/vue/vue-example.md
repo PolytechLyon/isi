@@ -4,7 +4,11 @@
 <div class="fragment fade-out" data-fragment-index="1">
 
 ```css fix
-#app { button { position: absolute; } }
+#app {
+  button {
+    position: absolute;
+  }
+}
 ```
 
 ```html fix
