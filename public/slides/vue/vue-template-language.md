@@ -6,7 +6,7 @@
 
 * Les gabarits sont des fragments HTML
   * Valides syntaxiquement
-* Ils permettent de lier le DOM avec l'instance du composant rendu
+* Ils permettent de lier une partie du DOM avec l'instance du composant rendu
 
 </div>
 
@@ -16,7 +16,8 @@
 
 ```html
   <div id="app">
-    <h1>{{ greeting }}</h1>
+    <div>Greeting</div>
+    <div>{{ greeting }}</div>
   </div>
 ```
 
@@ -30,6 +31,7 @@
 
 ```html
   <div id="app">
+    <progress value="0.5"></progress>
     <progress :value="progress"></progress>
   </div>
 ```
