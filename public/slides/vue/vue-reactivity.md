@@ -10,15 +10,14 @@
 
 * Le problème
 
-```javascript [5,7]
+```javascript []
 const { createApp } = Vue;
 createApp({
- template: '{{ counter }}',
+ template: '{{ c }}',
  setup() {
-  let counter = 0;
-  setInterval(() =>
-      counter++, 500);
-  return { counter }
+  let c = 0;
+  setInterval(() => c++, 500);
+  return { c }
  }
 }).mount('#app');
 ```
@@ -31,15 +30,14 @@ createApp({
 
 * La solution
 
-```javascript [5,7]
+```javascript []
 const { createApp, ref } = Vue;
 createApp({
- template: '{{ counter }}',
+ template: '{{ c }}',
  setup() {
-  const counter = ref(0);
-  setInterval(() =>
-      counter.value++, 500);
-  return { counter }
+  const c = ref(0);
+  setInterval(() => c.value++, 500);
+  return { c }
  }
 }).mount('#app');
 ```
