@@ -10,13 +10,11 @@
 </head>
 
 <body>
-  <div id="app">
-    <ul>
-      <li v-for="color in ['red', 'blue', 'green']" :key="color">
-        <span :style="{ color }">{{ color }}</span>
-      </li>
-    </ul>
-  </div>
+  <ul id="app">
+    <li v-for="color in ['red', 'blue', 'green']" :key="color">
+      <span :style="{ color }">{{ color }}</span>
+    </li>
+  </ul>
   <script src="https://unpkg.com/vue@3"></script>
   <script src="script.js"></script>
 </body>
