@@ -4,8 +4,8 @@
 
 <div class="fragment fade-out" data-fragment-index="1">
 
-* L'interface utilisateur (page Web) est décomposée de plusieurs composants.
-* Un composant est un élément isolé et réutilisable de la page Web.
+* L'interface utilisateur (une page Web) est décomposée en plusieurs composants.
+* Un composant est un élément isolé et réutilisable.
 * Les composants sont organisés dans une structure arborescente, avec un composant racine.
 
 </div>
@@ -32,9 +32,9 @@
 
 <div class="fragment fade-in" data-fragment-index="3">
 
-* Accessibles depuis le gabarit ce sont :
-  * Les attributs `props` de composant
+* Accessibles depuis le gabarit sont :
   * Les éléments de l'objet de retour de `setup()`
+  * Les attributs `props` de composant
 </div>
 
 </div>
@@ -50,7 +50,7 @@ const AppButton = {
   props: ['position'],                    // lié au style
   setup() {
     return {
-      remove: e => e.target.remove()      // déclenché par click
+      remove: e => e.target.remove()      // déclenché par clic
     };
   }
 }
@@ -72,16 +72,16 @@ const AppButton = {
   data-line-numbers="10|2-9"
   data-fragment-index="5">
 const { createApp, ref } = Vue;
-createApp({
+const app = createApp({
   setup() {
     const positions = ref([]);
     document.addEventListener('click', ({ x, y }) =>
       positions.value.push({ left: `${x}px`, top: `${y}px` }));
     return { positions };
   }
-})
-.component('app-button', AppButton)
-.mount('#app');
+});
+app.component('app-button', AppButton);
+app.mount('#app');
 </code></pre>
 
 </div>
@@ -108,7 +108,7 @@ createApp({
 
 <div class="fragment fade-in-then-out" data-fragment-index="7">
 
-* Les attributs passent de père en fils `:nom="valeur"`
+* Les attributs (props) passent de composant père en composant fils
 
 ``` [2-5]
   <div id="app">
@@ -122,6 +122,7 @@ createApp({
 
 <div class="fragment fade-in" data-fragment-index="8">
 
+* Liaison dynamique `:nom="valeur"`
 * Syntaxe simplifiée `:nom` pour `:nom="nom"`
 
 ``` [2-5]
@@ -198,7 +199,7 @@ Résultat
 
 <div class="fragment fade-in-then-out" data-fragment-index="13">
 
-* Crochet de cycle de vie de composant
+* Crochet de cycle de vie d'un composant
 
 ```javascript [6,7]
 setup() {

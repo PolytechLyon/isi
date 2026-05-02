@@ -10,13 +10,13 @@ const AppButton = {
     }
 }
 
-createApp({
+const app = createApp({
     setup() {
         const positions = ref([]);
         document.addEventListener('click', ({ x, y }) =>
             positions.value.push({ left: `${x}px`, top: `${y}px` }));
         return { positions };
     }
-})
-.component('app-button', AppButton)
-.mount('#app');
+});
+app.component('app-button', AppButton);
+app.mount('#app');
