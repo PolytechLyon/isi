@@ -22,8 +22,6 @@ const obj = {
 }
 obj.f()         // inner x (this est obj) 
 obj.g()         // outer x (this est le this global)
-obj.f.call()    // outer x (this est le this global ici)
-obj.g.call()    // outer x (this est le this global, toujours)
 ```
 </div>
 

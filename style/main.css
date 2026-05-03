@@ -153,6 +153,10 @@
     color: var(--r-link-color-dark);
 }
 
+.reveal .small {
+    font-size: .5em;
+}
+
 #eval-console {
     position: absolute;
     background: var(--r-selection-background-color);

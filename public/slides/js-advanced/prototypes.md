@@ -21,8 +21,8 @@ obj.toString(); // Cela marche !
 
 * En JavaScript, chaque objet a un prototype :
   * qui est un autre objet,
-  * éventuellement nul
-* Un prototype non nul possède, en tant qu'objet, un prototype, éventuellement nul
+  * qui peut être nul
+* Un prototype non nul possède, en tant qu'objet, un prototype, possiblement nul
 * On parle de la **chaîne de prototype**
 
 
@@ -52,8 +52,8 @@ console.log(typeof prototype.toString);  // function
 
 <div class="fragment fade-in-then-out" data-fragment-index="4">
 
-* Lorsqu'un objet est créé avec la syntaxe de deux accolades, il est assigné un prototype spécial : `Object.prototype`
-* Il contient les propriétés (méthodes) `toString()`, `valueOf()`, etc
+* Lorsqu'un objet est créé avec la syntaxe de deux accolades, le constructeur `Object` est implicitement appelé. L'objet est donc assigné un prototype spécial : `Object.prototype`.
+* Il contient les propriétés (méthodes) `toString()`, `valueOf()`, etc.
 
 ```javascript
 const obj = {};
@@ -66,7 +66,7 @@ obj.toString();
 <div class="fragment fade-in-then-out" data-fragment-index="5">
 
 * Deux propriétés ayant la même clé peuvent coexister dans la chaîne de prototype d'un objet
-* C'est la valeur de la propriété la plus proche de l'objet qui sera prise en compte
+* La valeur de la propriété la plus proche de l'objet *ombrage* les autres, et sera seule prise en compte
 * On parle de la **redéfinition des propriétés**
 
 ```javascript
@@ -80,7 +80,7 @@ obj.toString();             // This is an object
 
 <div class="fragment" data-fragment-index="6">
 
-* La méthode `Object.create()` permet de créer un objet avec un prototype personalisé
+* La méthode `Object.create()` permet de créer un objet avec un prototype personnalisé
 
 ```javascript
 const prototypeless = Object.create(null);
@@ -88,7 +88,7 @@ prototypeless.toString;             // undefined
 
 const Loggable = {
   log() {
-    console.log(this.toString());
+    console.log(this);
   },
 };
 const obj = Object.create(Loggable);

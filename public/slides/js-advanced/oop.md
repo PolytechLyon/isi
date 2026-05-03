@@ -46,7 +46,11 @@ Square.prototype.toString = function() { return `[${this.x}²]`; };
 
 </div>
 <div class="fragment fade-in" data-fragment-index="3">
+
 Néanmoins, le code est difficile à maintenir !
+
+<div class="small">Code à titre informatif<div>
+
 </div>
 </div>
 </div>

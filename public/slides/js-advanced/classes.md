@@ -57,7 +57,6 @@ class Square extends Rectangle {
   area() { return this.x * this.x; }
   toString() { return `[${this.x}²]`; }
 }
-const shapes = [new Rectangle(2, 3), new Square(2)];
 [new Rectangle(2, 3), new Square(2)].forEach(shape =>
     console.log(shape.toString(), shape.area()));
 </code></pre>
