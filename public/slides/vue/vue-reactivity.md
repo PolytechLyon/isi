@@ -64,12 +64,12 @@ createApp({
 Réactivité profonde
 
 ```javascript
+const { createApp, ref } = Vue;
 createApp({
-  template: '{{ a.twice() }}',
+  template: '{{ a.b.counter }}',
   setup() {
     const a = ref({
       b: { counter: 0 },
-      twice() { return 2 * this.b.counter; },
     });
     setInterval(() => a.value.b.counter++, 500);
     return { a }
@@ -83,9 +83,8 @@ createApp({
 
 <div class="fragment fade-in-then-out">
 
-* La réactivité des références d'objets est profonde.
-  * La valeur est un proxy à l'objet original.
-  * Fonction `toRaw()` pour déproxifier.
+* La valeur est un proxy à l'objet original.
+* Fonction `toRaw()` pour déproxifier.
 
 ```javascript []
 const { ref, toRaw } = Vue;
