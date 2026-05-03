@@ -1,0 +1,9 @@
+body {
+    background-color: linen;
+}
+
+#app {
+    input {
+        width: 50px;
+    }
+}

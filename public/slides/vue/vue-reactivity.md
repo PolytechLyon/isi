@@ -53,8 +53,8 @@ createApp({
 <div class="fragment fade-in-then-out" data-fragment-index="2">
 
 * La fonction `ref()` envoie une référence réactive :
-  * Sa valeur (champ `value`) est traqué.
-  * Chaque changement déclenche une mise à jour de la page si nécessaire.
+  * Sa valeur (champ `value`) est traquée.
+  * Chaque changement déclenche une mise à jour des composants impactés.
   * Pas besoin de déréférencement dans le gabarit.
 
 </div> <!-- .fragment -->
@@ -86,52 +86,37 @@ createApp({
 * La réactivité des références d'objets est profonde.
   * La valeur est un proxy à l'objet original.
   * Fonction `toRaw()` pour déproxifier.
+
+```javascript []
+const { ref, toRaw } = Vue;
+
+const obj = {};
+const objRef = ref(obj);
+console.log(obj === objRef.value);        // false
+console.log(obj === toRaw(objRef.value)); // true
+
+```
+
+</div> <!-- .fragment -->
+
+<div class="fragment fade-in-then-out">
+
 * La fonction `computed()` envoie une référence à une valeur dérivée à partir des autres références.
 
-</div> <!-- .fragment -->
-
-
-<div class="fragment fade-in-then-out">
-
-Réactivité par proxy, le problème
-
-```javascript [7, 8]
+```javascript
 const { createApp, ref, computed } = Vue;
 createApp({
-  template: '{{ compare }}',
+  template: '<input v-model="text" /><br/>{{ reversed }}',
   setup() {
-    const obj = {};
-    const objRef = ref(obj);
-    const compare = computed(() =>
-            objRef.value === obj);
-    return { compare };
-  },
-}).mount('#app');
+    const text = ref("");
+    const reversed = computed(() => [...text.value].reverse().join(""));
+    return { text, reversed };
+  }
+})
+.mount('#app');
 ```
 
-<div data-code-example="vue-proxy-problem" data-code-example-size="small"></div>
-
-</div> <!-- .fragment -->
-
-<div class="fragment fade-in-then-out">
-
-Réactivité par proxy, la solution
-
-```javascript [8]
-const { createApp, ref, computed, toRaw } = Vue;
-createApp({
-  template: '{{ compare }}',
-  setup() {
-    const obj = {};
-    const objRef = ref(obj);
-    const compare = computed(() =>
-            toRaw(objRef.value) === obj);
-    return { compare };
-  },
-}).mount('#app');
-```
-
-<div data-code-example="vue-proxy-solution" data-code-example-size="small"></div>
+<div data-code-example="vue-reactivity-computed" data-code-example-size="small"></div>
 
 </div> <!-- .fragment -->
 
@@ -144,7 +129,7 @@ const { createApp, ref } = Vue;
 createApp({
   template: '<form ref="formRef"><input @click="reset()"/></form>',
   setup() {
-    const formRef = ref(null);  // Réf sera peuplé lors du montage
+    const formRef = ref(null);  // Réf sera peuplée lors du montage
     const reset = () => formRef.value?.reset();
     return { formRef, reset };
   },
