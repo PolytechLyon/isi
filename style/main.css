@@ -159,7 +159,7 @@
 
 #eval-console {
     position: absolute;
-    background: var(--r-selection-background-color);
+    background: var(--r-main-color);
     width: 400px;
     height: 300px;
     bottom: 50px;
@@ -173,7 +173,7 @@
     line-height: 1.2em;
     word-wrap: break-word;
 
-    color: var(--r-inline-code-color)
+    color: var(--r-background-color);
 }
 
 .reveal-viewport.no-h4 h4 {
