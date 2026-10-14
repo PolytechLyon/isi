@@ -32,7 +32,7 @@ Déclaration d'une méthode
 Héritage d'une autre classe
 </li>
 
-<li class="fragment fade-in-the-out" data-fragment-index="6">
+<li class="fragment fade-in-then-out" data-fragment-index="6">
 Redéfinition d'une méthode
 </li>
 
@@ -112,8 +112,7 @@ console.log(p.canDrive);
     class="javascript language-javascript fix has-error"
     data-trim
     data-noescape
-    data-line-numbers="1"
-    data-line-numbers>
+    data-line-numbers="1">
 p.#age;    // Error: Expected identifier but found "#age"
 </code></pre>
 </div>

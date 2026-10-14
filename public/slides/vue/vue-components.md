@@ -173,7 +173,7 @@ const AppButton = {
 
 * Le composant parent peut réagir à ces événements
 
-```javascript [4,8]
+```html [2]
     <app-button v-for="coordinate in coordinates"
                 @remove="removeCoordinate"
                 :coordinate :key="coordinate.key" />

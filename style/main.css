@@ -17,7 +17,7 @@
 .vertical-center {
     display: flex;
     flex-flow: column;
-    align-content: center;
+    align-items: center;
 }
 
 .grayscale {

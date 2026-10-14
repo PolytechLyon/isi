@@ -5,7 +5,7 @@
 
 ```html fix
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head><meta charset="UTF-8"><title>DOM</title></head>
   <body>
     <h1 class="focus">Le modèle objet de document</h1>

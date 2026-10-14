@@ -7,7 +7,7 @@ const evalConsole = {
     element: undefined,
     timeoutId: undefined,
     close() {
-        evalConsole.element?.close();
+        evalConsole.element.close();
         evalConsole.element.innerHTML = "";
         document.removeEventListener("keyup", evalConsole.close);
     },

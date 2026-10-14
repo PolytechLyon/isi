@@ -10,7 +10,7 @@
   "keywords": [],
   "author": "Ahmad SHAHWAN",
   "license": "ISC",
-  "description": "Ingénierie des Systèmes d'Information I",
+  "description": "Ingénierie des Systèmes d'Information",
   "devDependencies": {
     "vite": "^5.4.10"
   },

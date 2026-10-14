@@ -1,4 +1,4 @@
-<h2 class="r-fit-text">Développement Web Front-end</h2>
+<h2 class="r-fit-text">Développement front-end</h2>
 <div class="space-around">
     <span style="width: 30%" class="vertical-center">
         <div class="r-stack">

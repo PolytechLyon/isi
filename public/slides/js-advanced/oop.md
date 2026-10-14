@@ -49,7 +49,7 @@ Square.prototype.toString = function() { return `[${this.x}²]`; };
 
 Néanmoins, le code est difficile à maintenir !
 
-<div class="small">Code à titre informatif<div>
+<div class="small">Code à titre informatif</div>
 
 </div>
 </div>

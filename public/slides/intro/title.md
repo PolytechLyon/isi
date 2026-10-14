@@ -1,4 +1,4 @@
-# Ingénierie des Systèmes d'Informatique <!-- { .element class="r-fit-text" } -->
+# Ingénierie des Systèmes d'Information <!-- { .element class="r-fit-text" } -->
 https://polytechlyon.github.io/isi
 
 #### Ahmad SHAHWAN
