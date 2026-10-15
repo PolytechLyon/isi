@@ -6,15 +6,20 @@ import RevealNotes from 'reveal.js/plugin/notes/notes';
 const evalConsole = {
     element: undefined,
     timeoutId: undefined,
+    onKeyDown(event) {
+        event.stopPropagation();
+        event.preventDefault();
+        evalConsole.close();
+    },
     close() {
         evalConsole.element.close();
         evalConsole.element.innerHTML = "";
-        document.removeEventListener("keyup", evalConsole.close);
+        window.removeEventListener("keydown", evalConsole.onKeyDown, true);
     },
     open(html) {
         evalConsole.element.innerHTML = html;
-        evalConsole.element?.showModal();
-        document.addEventListener("keyup", evalConsole.close);
+        evalConsole.element.showModal();
+        window.addEventListener("keydown", evalConsole.onKeyDown, true);
         clearTimeout(evalConsole.timeoutId);
         evalConsole.timeoutId = setTimeout(evalConsole.close, 7_000);
     }
