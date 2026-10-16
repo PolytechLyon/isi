@@ -19,7 +19,7 @@
    let i = 0;
    const adj = ['structurée', 'stylée', 'dynamique'];
    const el = document.getElementById('adjective');
-   setInterval(() =&gt; el.innerText = adj[i++ % 3], 500);
+   setInterval(() =&gt; el.innerText = adj[i++ % 3], 1000);
   &lt;/script&gt;
  &lt;/body&gt;
 &lt;/html&gt;
@@ -27,5 +27,5 @@
 <div class="space-around">
     <span class="fragment" data-fragment-index="1" style="color: #e34c26">🧱 HTML</span>
     <span class="fragment" data-fragment-index="2" style="color: #264de4">🎨 CSS</span>
-    <span class="fragment" data-fragment-index="3" style="color: #f0db4f">⚙️ JavaScript</span>
+    <span class="fragment" data-fragment-index="3" style="color: #000000">⚙️ JavaScript</span>
 </div>
