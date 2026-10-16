@@ -4,7 +4,7 @@
 * Syntaxe familière (Java, C)
 
 ```javascript
-let hours = new Date().getHours();
+const hours = new Date().getHours();
 if (hours < 12) {
     console.log('Bonjour');
 } else {

@@ -4,7 +4,7 @@
 * Appels asynchrones possibles
   * En utilisant des fonctions de rappel (callbacks)
 
-```javascript fix
+```javascript fix not-runnable
 console.log('one');
 setTimeout(() => console.log('two'), 0); // délai nul
 alert();     // appel bloquant, généralement déconseillé 
