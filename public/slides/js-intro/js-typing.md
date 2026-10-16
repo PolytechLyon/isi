@@ -1,6 +1,6 @@
-### Typage dynamique
-* Typage faible, aucune déclaration de type
-* Le type peut varier au cours de l'exécution
+### Typage dynamique et faible
+* Typage dynamique : aucune déclaration de type, le type peut varier au cours de l'exécution
+* Typage faible : conversions implicites entre types
 
 ```javascript
 let x = 1;
@@ -11,4 +11,6 @@ x = [1, 2, 3];
 console.log(typeof x);  // object
 x = { a: 1, b: 2, c: 3 };
 console.log(typeof x);  // object
+// Typage faible
+console.log('1' + 1);   // 11
 ```

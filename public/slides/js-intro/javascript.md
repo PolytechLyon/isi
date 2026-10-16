@@ -3,6 +3,6 @@
 
 * Haut niveau
 * Interprété
-* Typage faible et dynamique
+* Typage dynamique et faible
 * Orienté objet
 * Monothread
