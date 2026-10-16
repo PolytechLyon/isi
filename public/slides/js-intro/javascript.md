@@ -4,5 +4,5 @@
 * Haut niveau
 * Interprété
 * Typage faible et dynamique
-* Orienté-objet
+* Orienté objet
 * Monothread

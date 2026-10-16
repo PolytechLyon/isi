@@ -1,12 +1,12 @@
-### Exécusion monothread
+### Exécution monothread
 * Un seul fil d'exécution par agent
-* Tâches traitées complétement et sans interruption
+* Tâches traitées complètement et sans interruption
 * Appels asynchrones possibles
   * En utilisant des fonctions de rappel (callbacks)
 
 ```javascript fix
 console.log('one');
-setTimeout(() => console.log('two'), 0); // zéro attente
+setTimeout(() => console.log('two'), 0); // délai nul
 alert();     // appel bloquant, généralement déconseillé 
 console.log('three');
 ```

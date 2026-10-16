@@ -1,4 +1,4 @@
-### Langage Haut Niveau
+### Langage haut niveau
 * Abstraction des spécificités techniques
 * Proche des langues naturelles (anglais)
 * Syntaxe familière (Java, C)
