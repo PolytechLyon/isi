@@ -4,5 +4,5 @@
 * Les objets
 * Les prototypes
 * Les constructeurs
-* L'orienté object
+* L'orienté objet
 * Les classes

@@ -1,4 +1,4 @@
-### Auto-référence
+### Autoréférence
 
 <div class="r-stack">
 
@@ -14,14 +14,14 @@
 <div class="fragment" data-fragment-index="1">
 
 ```javascript
-this.x = 'outer x'
+this.x = 'outer x';
 const obj = {
     x: 'inner x',
     f: function () { console.log(this.x); }, // fonction classique
     g: () => console.log(this.x)             // fonction fléchée
-}
-obj.f()         // inner x (this est obj) 
-obj.g()         // outer x (this est le this global)
+};
+obj.f();        // inner x (this est obj) 
+obj.g();        // outer x (this est le this global)
 ```
 </div>
 

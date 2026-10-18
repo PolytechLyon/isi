@@ -4,10 +4,10 @@
 
 <div class="fragment fade-out" data-fragment-index="1">
 
-* Un objet est une collection des propriétés
+* Un objet est une collection de propriétés
   * Une propriété est une paire clé-valeur
-  * La clé est une chaine caractère (ou symbole)
-  * La valeur est une valeur libre
+  * La clé est une chaîne de caractères (ou symbole)
+  * La valeur peut être de n'importe quel type
   * Une méthode est une propriété dont la valeur est une fonction
 
 
@@ -16,8 +16,8 @@
 
 * Syntaxe
   * L'objet est entouré par des accolades
-  * Les propriétés sont séparés par des virgules
-  * Un deux-point sépare la clé, ou nom, et la valeur
+  * Les propriétés sont séparées par des virgules
+  * Le deux-points sépare la clé, ou nom, de la valeur
 
 ```javascript
 const person = {
@@ -34,17 +34,17 @@ const person = {
 <div class="fragment fade-in-then-out" data-fragment-index="2">
 
 * Syntaxe concise pour
-  * Une propriété dont le nom et la valeur correspondent aux nom et valeur d'une variable 
+  * Une propriété dont le nom et la valeur correspondent au nom et à la valeur d'une variable 
   * Une méthode
 
 ```javascript [3-4]
-const name = 'John'
+const name = 'John';
 const person = {
     name,
     greet() {
         console.log(`Hi, this is ${this.name}`);
     }
-}
+};
 ```
 
 </div>

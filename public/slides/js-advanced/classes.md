@@ -7,7 +7,7 @@
 <div class="r-stack">
 
 <div class="fragment fade-out" data-fragment-index="1">
-Une classe permet de réaliser l'OOP plus simplement
+Une classe permet de réaliser la POO plus simplement
 </div>
 
 <ul class="r-stack fragment fade-in" data-fragment-index="1">
@@ -78,7 +78,7 @@ Propriétés privées
 </li>
 
 <li class="fragment fade-in-then-out" data-fragment-index="9">
-Accesseur de propriétés (mot-clés <code>get</code> et <code>set</code>)
+Accesseur de propriétés (mots-clés <code>get</code> et <code>set</code>)
 </li>
 
 <li class="fragment fade-in" data-fragment-index="10">
@@ -113,7 +113,7 @@ console.log(p.canDrive);
     data-trim
     data-noescape
     data-line-numbers="1">
-p.#age;    // Error: Expected identifier but found "#age"
+p.#age;    // SyntaxError
 </code></pre>
 </div>
 

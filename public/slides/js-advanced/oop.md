@@ -1,4 +1,4 @@
-### L'Orienté Objet
+### La programmation orientée objet
 
 <div class="r-stack">
 
@@ -17,7 +17,7 @@ Rappel
 En JavaScript
 * **Les principes de la programmation orientée objet**
   * **Encapsulation** : les propriétés et les méthodes 
-  * **Héritage** : la chaîne de prototype
+  * **Héritage** : la chaîne de prototypes
   * **Polymorphisme** : la redéfinition des propriétés
 </div>
 
@@ -42,7 +42,7 @@ Square.prototype.toString = function() { return `[${this.x}²]`; };
 <div class="fragment fade-out" data-fragment-index="3">
 
 * `Square` hérite de `Rectangle`
-* Méthode polymorphique `toString()`
+* Méthode polymorphe `toString()`
 
 </div>
 <div class="fragment fade-in" data-fragment-index="3">

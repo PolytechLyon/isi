@@ -23,16 +23,16 @@ obj.toString(); // Cela marche !
   * qui est un autre objet,
   * qui peut être nul
 * Un prototype non nul possède, en tant qu'objet, un prototype, possiblement nul
-* On parle de la **chaîne de prototype**
+* On parle de la **chaîne de prototypes**
 
 
 </div>
 
 <div class="fragment fade-in-then-out" data-fragment-index="2">
 
-* Lorsqu'une propriété est accédée, par sa clé, sur un objet, l'objet est d'abord cherché pour une propriété de la même clé
-* Si une telle propriété n'est pas trouvée, la chaîne de prototype est cherché, en partant de l'objet même
-* Jusqu'à ce qu'une propriété de la même clé soit trouvée, ou un prototype nul soit rencontrée
+* L'accès à une propriété par sa clé commence par une recherche dans l'objet lui-même
+* Si une telle propriété n'est pas trouvée, la chaîne de prototypes est parcourue
+* Jusqu'à ce qu'une propriété de la même clé soit trouvée, ou qu'un prototype nul soit rencontré
 
 </div>
 
@@ -46,7 +46,7 @@ console.log(typeof prototype);           // object
 console.log(typeof prototype.toString);  // function
 ```
 
-* L'accesseur historique `__proto__` donne accès au prototype aussi, mais son usage est déconseillé
+* L'accesseur historique `__proto__` donne ausso accès au prototype, mais son usage est déconseillé
 
 </div>
 
@@ -65,8 +65,8 @@ obj.toString();
 
 <div class="fragment fade-in-then-out" data-fragment-index="5">
 
-* Deux propriétés ayant la même clé peuvent coexister dans la chaîne de prototype d'un objet
-* La valeur de la propriété la plus proche de l'objet *ombrage* les autres, et sera seule prise en compte
+* Deux propriétés ayant la même clé peuvent coexister dans la chaîne de prototypes d'un objet
+* La valeur de la propriété la plus proche de l'objet *masque* les autres, et sera seule prise en compte
 * On parle de la **redéfinition des propriétés**
 
 ```javascript
