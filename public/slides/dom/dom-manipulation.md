@@ -22,7 +22,7 @@
 
 * Lecture par identifiant
 
-```javascript fix
+```javascript fix not-runnable
 document.getElementById('course');      // main#course
 ```
 
@@ -32,7 +32,7 @@ document.getElementById('course');      // main#course
 
 * Lecture d'un élément par sélecteur : nom de balise
 
-```javascript fix
+```javascript fix not-runnable
 document.querySelector('h1');           // h1.focus
 ```
 
@@ -42,7 +42,7 @@ document.querySelector('h1');           // h1.focus
 
 * Lecture d'un élément par sélecteur : nom de classe
 
-```javascript fix
+```javascript fix not-runnable
 document.querySelector('.focus');       // h1.focus
 ```
 
@@ -52,7 +52,7 @@ document.querySelector('.focus');       // h1.focus
 
 * Lecture d'ensemble d'éléments par sélecteur
 
-```javascript fix
+```javascript fix not-runnable
 document.querySelectorAll('.focus');    // [h1.focus, span.focus]
 ```
 

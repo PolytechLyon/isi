@@ -4,7 +4,7 @@
 <div class="fragment fade-out" data-fragment-index="3">
 
 <pre><code
-    class="javascript language-javascript"
+    class="javascript language-javascript not-runnable"
     data-trim
     data-noescape
     data-line-numbers
