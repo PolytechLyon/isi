@@ -46,13 +46,13 @@ console.log(typeof prototype);           // object
 console.log(typeof prototype.toString);  // function
 ```
 
-* *Par convention*, le prototype est stocké dans la propriété, non standardisée, `__proto__`
+* L'accesseur historique `__proto__` donne accès au prototype aussi, mais son usage est déconseillé
 
 </div>
 
 <div class="fragment fade-in-then-out" data-fragment-index="4">
 
-* Lorsqu'un objet est créé avec la syntaxe de deux accolades, le constructeur `Object` est implicitement appelé. L'objet est donc assigné un prototype spécial : `Object.prototype`.
+* Un objet créé avec `{}` a pour prototype `Object.prototype`
 * Il contient les propriétés (méthodes) `toString()`, `valueOf()`, etc.
 
 ```javascript

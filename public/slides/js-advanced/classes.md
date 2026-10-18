@@ -21,7 +21,7 @@ Déclaration d'une propriété
 </li>
 
 <li class="fragment fade-in-then-out" data-fragment-index="3">
-Constructeur, sans ou avec paramètres
+Constructeur, optionnel, sans ou avec paramètres
 </li>
 
 <li class="fragment fade-in-then-out" data-fragment-index="4">
@@ -78,7 +78,7 @@ Propriétés privées
 </li>
 
 <li class="fragment fade-in-then-out" data-fragment-index="9">
-Accesseur des propriétés (opérateur <code>get</code> et <code>set</code>)
+Accesseur de propriétés (mot-clés <code>get</code> et <code>set</code>)
 </li>
 
 <li class="fragment fade-in" data-fragment-index="10">
