@@ -40,6 +40,7 @@ console.log('' !== false);         // true
 
 * Comparaison d'inégalité `<`, `>`, `<=`, `>=`
 * Entre deux nombres ou deux chaînes de caractères
+  * Sinon, conversion implicite
 
 ```javascript fix
 console.log(42 > 13);                    // true 

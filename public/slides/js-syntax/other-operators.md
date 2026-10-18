@@ -45,7 +45,7 @@ const person3 = { name: 'John' };
 console.log(person1?.name);     // John
 console.log(person2?.name);     // undefined
 person1.print?.();              // John
-person3.print?.();              // undefined
+person3.print?.();              // N'affiche rien
 ```
 
 ```fix has-error[1,2] no-numbering
