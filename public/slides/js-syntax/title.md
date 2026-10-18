@@ -2,8 +2,7 @@
 ## **La syntaxe**
 
 * Déclarations
-* Primitifs
+* Types primitifs
 * Comparaisons
 * Structures de contrôle
 * Fonctions
-* Objets

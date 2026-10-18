@@ -70,7 +70,7 @@ console.log(x);     // 45
 <div class="fragment fade-in-then-out" >
 
 * Structure de boucle `for-of`
-  * Itérer sur un tableau (ou autre itérables)
+  * Itérer sur un tableau (ou tout autre itérable)
 
 ```javascript
 const colors = ['Red', 'Green', 'Blue'];
@@ -84,7 +84,7 @@ for (let color of colors) {
 <div class="fragment fade-in-then-out" >
 
 * Structure de boucle `for-in`
-    * Itérer les propriétés (énumérables) d'un objet
+    * Itérer sur les propriétés (énumérables) d'un objet
 
 ```javascript
 const color = { red: 114, green: 139, blue: 178 };

@@ -1,11 +1,11 @@
-### Les chiffres
+### Les nombres
 
 <div class="r-stack">
 
 <div class="fragment fade-out" data-fragment-index="1">
 
-* Les nombres en JavaScript sont des réels (flottant) sur 8 octets (double précision)
-* Chiffres spéciaux : `Infinity`, `NaN`
+* Les nombres en JavaScript sont des réels à virgule flottante sur 8 octets (double précision)
+* Valeurs spéciales : `Infinity`, `NaN`
 ```javascript
 console.log(1 / 0 === Infinity);     // true
 console.log(0 / 0);                  // NaN

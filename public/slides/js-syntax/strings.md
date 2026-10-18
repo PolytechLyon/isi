@@ -4,7 +4,7 @@
 
 <div class="fragment fade-out" data-fragment-index="1">
 
-* Une valeur de type `string` peut être créée en utilisant des simples quotes ou des doubles quotes.
+* Une valeur de type `string` peut être créée en utilisant des guillemets simples ou doubles
 ```javascript
 const hi = "Hi";
 const hello = 'Hello';
@@ -19,7 +19,7 @@ console.log(typeof hello);               // string
 <div class="fragment fade-in-then-out" data-fragment-index="1">
 
 * Une valeur de type `string` peut être créée en utilisant l'accent grave
-* Cette valeur fait office d'un *gabarit*, qui peut contenir d'autre expression
+* Cette valeur fait office de *gabarit*, qui peut contenir d'autres expressions
 * Un gabarit peut s'étaler sur plusieurs lignes
 
 ```javascript [2-3]
@@ -33,8 +33,8 @@ console.log(greeting);
 
 <div class="fragment">
 
-* Les chaînes de caractères sont immutables
-* Différents opérations et opérateurs possibles
+* Les chaînes de caractères sont immuables
+* Opérations et opérateurs variés
 
 ```javascript
 const str = 'Hello World';

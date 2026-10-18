@@ -38,7 +38,7 @@ console.log('' !== false);         // true
 
 <div class="fragment">
 
-* Comparaison d'inégalité `<`, `>`, `<=`, `>=`
+* Comparaison d'ordre `<`, `>`, `<=`, `>=`
 * Entre deux nombres ou deux chaînes de caractères
   * Sinon, conversion implicite
 
@@ -48,7 +48,7 @@ console.log(42 >= '42');                 // true
 console.log(42 > NaN);                   // false
 console.log(NaN > 42);                   // false
 console.log('Jack' < 'Jacques');         // true
-console.log(false < true)                // true
+console.log(false < true);               // true
 ```
 
 </div>

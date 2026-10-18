@@ -23,7 +23,7 @@ str !== '' && console.log(str);     // Hi
 <div class="fragment" data-fragment-index="1">
 
 * Lorsqu'une condition est attendue : 
-  * Les valeurs suivantes s'évalueront à **faux** : `false`, `undefined`, `null`, `NaN`, `0`, `-0`, `0n`, `''`, 
+  * Les valeurs suivantes s'évalueront à **faux** : `false`, `undefined`, `null`, `NaN`, `0`, `-0`, `0n`, `''`
   * Toutes les autres valeurs s'évalueront à **vrai**
 
 ```javascript

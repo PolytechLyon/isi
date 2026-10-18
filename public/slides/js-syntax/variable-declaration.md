@@ -16,7 +16,7 @@ obj = { taille: x++ };
 </div>
 <div class="fragment fade-in-then-out" data-fragment-index="1">
 
-* `const` pour déclarer une variable lecture seule
+* `const` pour déclarer une variable en lecture seule
   * Initialisation obligatoire
 
 ```javascript
@@ -30,19 +30,19 @@ const message = 'Bonjour';
 
 * `var` ~pour déclarer une variable~
   * Déclaration hissée en haut de la portée  
-  * Utilisation dépréciée
+  * Utilisation déconseillée
 
 ```javascript
 x = 0;                      // Possible car déclaration hissée
 var x;
-var obj = { taille: x++ };  // Déclaration est initialisation
+var obj = { taille: x++ };  // Déclaration et initialisation
 ```
 
 </div>
 
 <div class="fragment" data-fragment-index="3">
 
-* `let` a une portée du bloc
+* `let` a une portée de bloc
   ```javascript
   let i = 42;
   for (let i = 0; i < 3; i++);

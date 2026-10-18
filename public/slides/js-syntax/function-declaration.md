@@ -4,20 +4,20 @@
 
 <div class="fragment fade-out" data-fragment-index="1">
 
-* Déclaration avec le mot clé `function`
+* Déclaration avec le mot-clé `function`
 
 ```javascript
 function f() {
     console.log('Hello world');
 }
 
-f();                        // on appel la fonction
+f();                        // on appelle la fonction
 ```
 
 </div>
 <div class="fragment fade-in-then-out" data-fragment-index="1">
 
-* Une fonction peut prendre une liste des paramètres
+* Une fonction peut prendre une liste de paramètres
 
 ```javascript
 function f(a, b) {
@@ -80,7 +80,7 @@ const sum = f(1, 2);        // appel uniquement après déclaration
 
 <div class="fragment">
 
-* Les **fonctions fléchées** : Syntaxe simplifiée
+* Les **fonctions fléchées** : syntaxe simplifiée
 * Permet d'écrire une fonction sur une seule ligne
     ```javascript
     const f = (a, b) => a + b;
