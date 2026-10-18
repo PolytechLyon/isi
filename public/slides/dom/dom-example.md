@@ -1,14 +1,13 @@
 ### Démo
 
 <div class="r-stack">
-<div class="fragment fade-out" data-fragment-index="3">
+<div class="fragment fade-out" data-fragment-index="1">
 
 <pre><code
     class="javascript language-javascript not-runnable"
     data-trim
     data-noescape
-    data-line-numbers
-    data-fragment-index="1">
+    data-line-numbers>
 const body = document.querySelector('body');
 document.addEventListener('click', pop);
 function pop(event) {
@@ -17,17 +16,17 @@ function pop(event) {
     button.innerText = 'X';
     button.style.left = `${x}px`;
     button.style.top = `${y}px`;
-    button.addEventListener('click', event => {
+    button.addEventListener('click', e => {
         button.remove();
-        event.stopPropagation();
-    })
+        e.stopPropagation();
+    });
     body.append(button);
 }
 </code>
 </pre>
 
 </div>
-<div class="fragment fade-in-then-out" data-fragment-index="3">
+<div class="fragment fade-in-then-out" data-fragment-index="1">
 
 ```css
 button { position: absolute; }
@@ -39,10 +38,10 @@ button { position: absolute; }
 <head>
     <meta charset="UTF-8">
     <title>Buttons</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-    <script src="app.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
 ```

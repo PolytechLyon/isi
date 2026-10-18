@@ -20,7 +20,7 @@
 
 <div class="fragment fade-in-then-out" data-fragment-index="1">
 
-* Lecture par identifiant
+* Lecture d'un élément par identifiant
 
 ```javascript fix not-runnable
 document.getElementById('course');      // main#course
@@ -50,7 +50,7 @@ document.querySelector('.focus');       // h1.focus
 
 <div class="fragment fade-in-then-out">
 
-* Lecture d'ensemble d'éléments par sélecteur
+* Lecture d'un ensemble d'éléments par sélecteur
 
 ```javascript fix not-runnable
 document.querySelectorAll('.focus');    // [h1.focus, span.focus]
@@ -60,12 +60,12 @@ document.querySelectorAll('.focus');    // [h1.focus, span.focus]
 
 <div class="fragment">
 
-* Lecture et modification d'élément
+* Lecture et modification d'un élément
 
 ```javascript fix
 const el = document.querySelector('title');
 const title = el.innerHTML;             // 'DOM'
-el.innerHTML = 'Document Object Model'; // Title changes
+el.innerHTML = 'Document Object Model'; // Le titre change
 ```
 
 </div>

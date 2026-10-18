@@ -6,9 +6,9 @@ function pop(event) {
     button.innerText = 'X';
     button.style.left = `${x}px`;
     button.style.top = `${y}px`;
-    button.addEventListener('click', event => {
+    button.addEventListener('click', e => {
         button.remove();
-        event.stopPropagation();
-    })
+        e.stopPropagation();
+    });
     body.append(button);
 }

@@ -6,11 +6,11 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-      <meta charset="UTF-8">
-      <title>DOM</title></head>
+    <meta charset="UTF-8">
+    <title>DOM</title></head>
   <body>
     <h1 class="focus">
-        Le modèle objet de document
+      Le modèle objet de document
     </h1>
     <main id="course">
       Le <span class="focus">DOM</span>
@@ -20,7 +20,7 @@
 </html>
 ```
 
-``` no-min-width
+```plaintext no-min-width
 
 html
 ├ head
