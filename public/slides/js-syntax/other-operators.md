@@ -26,7 +26,7 @@ console.log(typeof null);                // object
 * Opérateur ternaire
 
 ```javascript
-const msg = new Date().getHours() > 12 ? 'Bonjour' : 'Bonsoir';
+const msg = new Date().getHours() < 12 ? 'Bonjour' : 'Bonsoir';
 console.log(msg);
 ```
 </div>

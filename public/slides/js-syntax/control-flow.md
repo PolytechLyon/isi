@@ -24,7 +24,7 @@ if (day === 1 && month === 0) {
 ```javascript
 const date = new Date();
 const hour = date.getHours();
-if (hour > 12) {
+if (hour < 12) {
     console.log('Good morning.');
 } else {
     console.log('Good evening.');
