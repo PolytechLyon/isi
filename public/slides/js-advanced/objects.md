@@ -61,7 +61,7 @@ const greetKey = lang === 'fr' ? 'saluer' : 'greet';
 const person = {
     [nameKey]: 'John',
     [greetKey]() {
-        console.log(`Hi, this is ${this.name}`);
+        console.log(`Hi, this is ${this[nameKey]}`);
     }
 }
 ```
@@ -97,7 +97,7 @@ person['greet']();              // Hi, this is John
   class="javascript language-javascript"
   data-trim
   data-noescape
-  data-line-numbers="|11"
+  data-line-numbers="|12"
   data-fragment-index="6">
 const person = {
   firstname: 'John',
@@ -109,8 +109,8 @@ const person = {
 const { firstname, lastname: surname, greet } = person;
 console.log(firstname);         // John
 console.log(surname);           // Smith
-greet();                        // Hi, this is undefined
 person.greet();                 // Hi, this is John
+greet();                        // TypeError en mode strict
 </code></pre>
 
 </div>
