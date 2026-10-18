@@ -38,7 +38,8 @@ if (hour > 12) {
 
 ```javascript
 switch (new Date().getDay()) {
-    case 6, 0:
+    case 6:
+    case 0:
         console.log('Weekend');
         break;
     case 5:
