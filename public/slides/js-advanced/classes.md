@@ -102,7 +102,7 @@ class Person {
   }
   get canDrive() { return Person.isAdult(this); }
   set age(value) { this.#age = value; }
-  static isAdult(person) { return person.#age > 18; }
+  static isAdult(person) { return person.#age >= 18; }
 }
 const p = new Person('Jean', 19);
 console.log(p.canDrive);
