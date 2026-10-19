@@ -27,11 +27,11 @@
 const routes = [
   { path: '/', component: AppHome },
   { path: '/history', component: AppHistory },
-]
+];
 const router = createRouter({
   history: createMemoryHistory(),  // pour la démo
   routes,
-})
+});
 createApp({})
         .use(router)
         .mount('#app');
