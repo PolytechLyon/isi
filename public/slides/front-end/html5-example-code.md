@@ -27,5 +27,5 @@
 <div class="space-around">
     <span class="fragment" data-fragment-index="1" style="color: #e34c26">🧱 HTML</span>
     <span class="fragment" data-fragment-index="2" style="color: #264de4">🎨 CSS</span>
-    <span class="fragment" data-fragment-index="3" style="color: #000000">⚙️ JavaScript</span>
+    <span class="fragment" data-fragment-index="3" style="color: #323330">⚙️ JavaScript</span>
 </div>
