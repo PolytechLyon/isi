@@ -33,10 +33,10 @@ Annotations de type
 
 TypeScript
 
-<div data-external-example="https://www.typescriptlang.org/play/?ssl=4&ssc=35&pln=1&pc=1#code/MYewdgzgLgBGC2BTCECGBzRAuG0BOAlmOjALwwBEAEogDa0gUDcAUKJLCHgCaJ45gArvABGfMjAAsAJlbtouRMEF5sMESBC1EqMBKh5BiOeAWrgiAgDdE3HABFUURBLCIA7jEfOAFAEpWFiA"></div>
+<div data-external-example="https://www.typescriptlang.org/play/?#code/MYewdgzgLgBAtgUwhAhgcwQLhtATgSzDRgF4YAiACQQBsaRyBuAKFElhFwBMFdswArnABGvUjAAsAJhZtoOBMAG4sMYSBA0EKMOKi4BCWeHkrgCfADcEXbABEUUBOLAIA7jAdOAFAEoWzEA"></div>
 
 ```typescript
-const nmessage: string = "Hello";
+const message: string = "Hello";
 const order: number = 42;
 const secure: boolean = true;
 const received: Date = new Date();
@@ -47,7 +47,7 @@ const received: Date = new Date();
 
 JavaScript
 ```javascript
-const nmessage = "Hello";
+const message = "Hello";
 const order = 42;
 const secure = true;
 const received = new Date();
