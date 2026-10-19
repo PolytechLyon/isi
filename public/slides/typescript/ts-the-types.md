@@ -83,7 +83,7 @@ words.push(42);
 Types objet
 
 ```typescript
-const message: { text: string, received: Date } = {
+const message: { text: string, received?: Date } = {
     text: "Hello",
     received: new Date(),
 }
@@ -92,14 +92,13 @@ const message: { text: string, received: Date } = {
 
 <div class="fragment fade-in-then-out" data-fragment-index="6">
 
-Types optionnels
+Types objet : propriétés optionnelles
 
 ```typescript
 const message: { text: string, received?: Date } = {
     text: "Hello",
+    // propriété received peut être omise
 }
-message.received = new Date();
-message.received = undefined;
 ```
 </div>
 
