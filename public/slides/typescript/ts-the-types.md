@@ -86,7 +86,7 @@ Types objet
 const message: { text: string, received?: Date } = {
     text: "Hello",
     received: new Date(),
-}
+};
 ```
 </div>
 
@@ -98,7 +98,7 @@ Types objet : propriétés optionnelles
 const message: { text: string, received?: Date } = {
     text: "Hello",
     // propriété received peut être omise
-}
+};
 ```
 </div>
 

@@ -76,7 +76,7 @@ TypeScript
 ```typescript[2,4] has-error no-numbering
 let x: number = 42; // Type déclaré
 x = "42";
-let y = 3.14        // Type number inféré
+let y = 3.14;       // Type number inféré
 y = "3.14";
 ```
 </div>
