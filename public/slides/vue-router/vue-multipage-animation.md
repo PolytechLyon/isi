@@ -1,4 +1,4 @@
-### Application web classiques
+### Application web classique
 
 * Une page par lien
 * Requête HTTP obligatoire

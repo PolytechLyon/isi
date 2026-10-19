@@ -1,3 +1,3 @@
 ## **Vue Router**
 
-Une librairie pour gérer la navigation côté client
+Une bibliothèque pour gérer la navigation côté client

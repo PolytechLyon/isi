@@ -1,4 +1,4 @@
-### Navigation sans librairie
+### Navigation sans bibliothèque
 
 <div class="r-stack">
 
@@ -14,7 +14,7 @@
 const routes = { '/': AppHome, '/history': AppHistory };
 const currentPath = ref(window.location.hash);
 addEventListener('hashchange', () => currentPath.value = window.location.hash);
-// Composant Dynamique
+// Composant dynamique
 const CurrentView = computed(() => routes[currentPath.value.slice(1) || '/']);
 createApp({
   setup() {

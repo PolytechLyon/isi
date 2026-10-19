@@ -1,9 +1,9 @@
 ### Classique vs monopage
 
-* Applications web classique (multi-page)
+* Applications web classiques (multipages)
   * Exposent une page HTML **par lien**
   * Requête HTTP obligatoire à chaque navigation
-* Les applications web monopage (SPA)
+* Applications web monopages (SPA)
   * Une seule page **par application**
-  * La navigation est animée dans le navigateur
+  * La navigation est gérée dans le navigateur
   * La page est mise à jour par fragment

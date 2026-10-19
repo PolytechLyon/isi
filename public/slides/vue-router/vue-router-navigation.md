@@ -5,12 +5,12 @@
 <div class="fragment fade-out" data-fragment-index="1">
 
 **Vue Router**
-* Librairie officielle pour la navigation avec Vue
-* Fonctionnalité avancée
-  * Gestion de paramètre dans la route,
-  * Navigation programmatique (depuis le code),
-  * Routes imbriquées,
-  * Redirection...
+* Bibliothèque officielle pour la navigation avec Vue
+* Fonctionnalités avancées
+  * Gestion des paramètres de route
+  * Navigation programmatique (depuis le code)
+  * Routes imbriquées
+  * Redirections, etc.
 </div>
 
 <div class="fragment fade-in" data-fragment-index="1">
