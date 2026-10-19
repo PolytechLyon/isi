@@ -4,10 +4,10 @@
 
 <div class="fragment fade-out" data-fragment-index="1">
 
-* Un *composable* est une fonction qui encapsule une logique avec état.
+* Un *composable* est une fonction qui encapsule une logique avec état
   * Réutilisation dans plusieurs composants
   * Gestion d'état partagé
-* Par convention, son nom commence par `use`.
+* Par convention, son nom commence par `use`
 
 </div>
 

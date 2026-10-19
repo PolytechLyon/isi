@@ -4,9 +4,9 @@
 
 <div class="fragment fade-out" data-fragment-index="1">
 
-* L'interface utilisateur (une page web) est décomposée en plusieurs composants.
-* Un composant est un élément isolé et réutilisable.
-* Les composants sont organisés dans une structure arborescente, avec un composant racine.
+* L'interface utilisateur (une page web) est décomposée en plusieurs composants
+* Un composant est un élément isolé et réutilisable
+* Les composants sont organisés dans une structure arborescente, avec un composant racine
 
 </div>
 
@@ -62,7 +62,7 @@ const AppButton = {
 <div class="fragment fade-in" data-fragment-index="4">
 <div class="fragment fade-out" data-fragment-index="6">
 
-* Le composant est enregistré auprès de l'application, ou auprès des composants qui l'utilisent.
+* Le composant est enregistré auprès de l'application, ou auprès des composants qui l'utilisent
 * L'application Vue est le composant racine. <!-- .element class="fragment" data-fragment-index="5"  -->
 
 <pre><code
@@ -94,9 +94,9 @@ app.mount('#app');
 
 <div class="fragment fade-out" data-fragment-index="7">
 
-* Une fois enregistré, le composant peut être utilisé dans les gabarits d'autres composants.
+* Une fois enregistré, le composant peut être utilisé dans les gabarits d'autres composants
 
-``` []
+```html []
   <div id="app">
         <app-button
             v-for="(position, key) in positions"
@@ -110,7 +110,7 @@ app.mount('#app');
 
 * Les attributs (props) passent du composant parent au composant enfant
 
-``` [2-5]
+```html [2-5]
   <div id="app">
         <app-button
             v-for="(position, key) in positions"
@@ -125,7 +125,7 @@ app.mount('#app');
 * Liaison dynamique `:nom="valeur"`
 * Syntaxe simplifiée `:nom` pour `:nom="nom"`
 
-``` [2-5]
+```html [2-5]
   <div id="app">
         <app-button
             v-for="(position, key) in positions"

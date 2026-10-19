@@ -9,9 +9,7 @@
   * Logique du composant (JavaScript)
   * Style du composant (CSS)
 * Aussi appelé SFC (Single-file component)
-<li class="fragment" data-fragment-index="1">
- <strong>Nécessite une phase de compilation</strong>
-</li>
+* Nécessite une phase de compilation
 
 </div>
 
