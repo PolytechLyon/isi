@@ -1,11 +1,4 @@
 import useClickCoordinates from "./useClickCoordinates.js";
-import AppButton from "./AppButton.js";
-
-function style({ removed }) {
-    return {
-        'text-decoration': removed ? 'line-through' : undefined,
-    }
-}
 
 const AppHistory = {
     template: `
@@ -18,10 +11,7 @@ const AppHistory = {
     `,
     setup() {
         const { history } = useClickCoordinates();
-        return { history, style };
-    },
-    components: {
-        'app-button': AppButton,
+        return { history };
     },
 }
 
