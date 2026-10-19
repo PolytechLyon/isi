@@ -29,7 +29,7 @@ const routes = [
   { path: '/history', component: AppHistory },
 ]
 const router = createRouter({
-  history: createMemoryHistory(),
+  history: createMemoryHistory(),  // pour la démo
   routes,
 })
 createApp({})
