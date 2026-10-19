@@ -4,8 +4,9 @@
 
 ### Les outils
 * Outil de gestion de paquets `npm`
-* Groupeur de modules (bundler) `esbuild`
-* Serveur de développement `vite`
+* Outil de compilation `vite`
+  * Serveur de développement
+  * Empaqueteur de modules (bundler)
 
 </div>
 
@@ -35,7 +36,7 @@
 * Dans le répertoire qui contient `package.json`
     * `npm i` pour installer les dépendances
     * `npm run dev` pour démarrer le serveur de développement
-    * Adresse : `http://localhost:5174/`
+    * Adresse : `http://localhost:5173/`
     * Ceci est un serveur *de développement*
 
 </div>
@@ -45,7 +46,7 @@
 ### Compilation du projet
 * Dans le répertoire qui contient `package.json`
     * `npm run build` pour compiler le projet
-    * Le répertoire `dest` contiendra les livrables
+    * Le répertoire `dist` contiendra les livrables
     * `npm run preview` permet de lancer un serveur pour tester les livrables
 
 </div>
