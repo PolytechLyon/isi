@@ -46,7 +46,7 @@ console.log(typeof prototype);           // object
 console.log(typeof prototype.toString);  // function
 ```
 
-* L'accesseur historique `__proto__` donne ausso accès au prototype, mais son usage est déconseillé
+* L'accesseur historique `__proto__` donne aussi accès au prototype, mais son usage est déconseillé
 
 </div>
 
