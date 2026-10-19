@@ -1,4 +1,4 @@
-## TypeScript
+## **TypeScript**
 
 * Le langage
 * Les types
