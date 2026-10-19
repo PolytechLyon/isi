@@ -23,7 +23,7 @@
 * `createRouter` est utilisé pour créer un routeur
 * Le routeur est enregistré auprès de l'application 
 
-```javascript
+```javascript not-runnable
 const routes = [
   { path: '/', component: AppHome },
   { path: '/history', component: AppHistory },
