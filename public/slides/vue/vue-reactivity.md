@@ -10,7 +10,7 @@
 
 * Le problème
 
-```javascript []
+```javascript not-runnable []
 const { createApp } = Vue;
 createApp({
  template: '{{ c }}',
@@ -30,7 +30,7 @@ createApp({
 
 * La solution
 
-```javascript []
+```javascript not-runnable []
 const { createApp, ref } = Vue;
 createApp({
  template: '{{ c }}',
@@ -63,7 +63,7 @@ createApp({
 
 Réactivité profonde
 
-```javascript
+```javascript not-runnable
 const { createApp, ref } = Vue;
 createApp({
   template: '{{ a.b.counter }}',
@@ -102,7 +102,7 @@ console.log(obj === toRaw(objRef.value)); // true
 
 * La fonction `computed()` renvoie une référence à une valeur dérivée à partir d'autres références.
 
-```javascript
+```javascript not-runnable
 const { createApp, ref, computed } = Vue;
 createApp({
   template: '<input v-model="text" /><br/>{{ reversed }}',
@@ -123,7 +123,7 @@ createApp({
 
 Références aux éléments de gabarit
 
-```javascript
+```javascript not-runnable
 const { createApp, ref } = Vue;
 createApp({
   template: '<form ref="formRef"><input @click="reset()"/></form>',

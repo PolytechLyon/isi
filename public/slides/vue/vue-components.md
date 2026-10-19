@@ -40,7 +40,7 @@
 </div>
 
 <pre><code
-  class="javascript language-javascript"
+  class="javascript language-javascript not-runnable"
   data-trim
   data-noescape
   data-line-numbers="|2,3,6"
@@ -66,7 +66,7 @@ const AppButton = {
 * L'application Vue est le composant racine. <!-- .element class="fragment" data-fragment-index="5"  -->
 
 <pre><code
-  class="javascript language-javascript"
+  class="javascript language-javascript not-runnable"
   data-trim
   data-noescape
   data-line-numbers="10|2-9"
@@ -153,7 +153,7 @@ Résultat
 
 * Un composant peut émettre des événements
 
-```javascript [4,8]
+```javascript not-runnable [4,8]
 const AppButton = {
   template: `<button :style @click.stop="remove">X</button>`,
   props: ['coordinate'],
@@ -201,7 +201,7 @@ Résultat
 
 * Crochet de cycle de vie d'un composant
 
-```javascript [6,7]
+```javascript not-runnable [6,7]
 setup() {
   const positions = ref([]);
   function pop({ x, y }) {

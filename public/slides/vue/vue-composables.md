@@ -15,7 +15,7 @@
 
 Exemple : `useClickCoordinates()`
 
-```javascript
+```javascript not-runnable
 const list = ref([]);
 const coordinates = readonly(list);
 function add({ x, y }) {
@@ -37,7 +37,7 @@ export default function useClickCoordinates() {
 
 Utilisation dans un composant
 
-```javascript [5]
+```javascript not-runnable [5]
 const AppButton = {
   template: `<button :style @click.stop="remove">X</button>`,
   props: ['coordinate'],
@@ -58,7 +58,7 @@ const AppButton = {
 
 Ou un autre
 
-```javascript [3]
+```javascript not-runnable [3]
 const App = {
   setup() {
     const { coordinates } = useClickCoordinates();

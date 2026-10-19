@@ -26,7 +26,7 @@
 
 <div class="fragment fade-in-then-out" data-fragment-index="1">
 
-```javascript
+```javascript not-runnable
 const { createApp, ref } = Vue;
 const app = createApp({
   setup() {
