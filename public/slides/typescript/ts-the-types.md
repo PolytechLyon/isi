@@ -148,11 +148,17 @@ const message: Message = {
 
 </div>
 
-<div class="fragment fade-in-then-out" data-fragment-index="8">
+<div class="fragment" data-fragment-index="8">
 
 La classe en tant que type
+* Le nom de la classe peut être utilisé comme type
+* Typage structurel : compatibilité selon la forme <!-- .element class="fragment" data-fragment-index="9" -->
 
-```typescript
+<pre><code
+    class="typescript language-typescript"
+    data-trim
+    data-line-numbers="|10"
+    data-fragment-index="9">
 class Message {
     text: string;
     received?: Date;
@@ -163,7 +169,7 @@ class Message {
 
 const msg1: Message = new Message("Hello");
 const msg2: Message = { text: "Hi", received: new Date() };
-```
+</code></pre>
 </div>
 
 
