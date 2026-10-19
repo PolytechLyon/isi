@@ -56,7 +56,7 @@ const AppButton = {
 
 <div class="fragment fade-in-then-out" data-fragment-index="3">
 
-Ou un autre
+Ou dans un autre
 
 ```javascript not-runnable [3]
 const App = {
