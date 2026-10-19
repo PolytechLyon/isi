@@ -13,7 +13,8 @@
 ```javascript not-runnable
 const routes = { '/': AppHome, '/history': AppHistory };
 const currentPath = ref(window.location.hash);
-addEventListener('hashchange', () => currentPath.value = window.location.hash);
+window.addEventListener('hashchange',
+  () => currentPath.value = window.location.hash);
 // Composant dynamique
 const CurrentView = computed(() => routes[currentPath.value.slice(1) || '/']);
 createApp({
