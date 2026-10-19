@@ -4,7 +4,7 @@
 
 <div class="fragment fade-out" data-fragment-index="1">
 
-* L'interface utilisateur (une page Web) est décomposée en plusieurs composants.
+* L'interface utilisateur (une page web) est décomposée en plusieurs composants.
 * Un composant est un élément isolé et réutilisable.
 * Les composants sont organisés dans une structure arborescente, avec un composant racine.
 
@@ -32,9 +32,9 @@
 
 <div class="fragment fade-in" data-fragment-index="3">
 
-* Accessibles depuis le gabarit sont :
+* Sont accessibles depuis le gabarit :
   * Les éléments de l'objet de retour de `setup()`
-  * Les attributs `props` de composant
+  * Les attributs `props` du composant
 </div>
 
 </div>
@@ -108,7 +108,7 @@ app.mount('#app');
 
 <div class="fragment fade-in-then-out" data-fragment-index="7">
 
-* Les attributs (props) passent de composant père en composant fils
+* Les attributs (props) passent du composant parent au composant enfant
 
 ``` [2-5]
   <div id="app">

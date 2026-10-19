@@ -52,8 +52,8 @@ createApp({
 
 <div class="fragment fade-in-then-out" data-fragment-index="2">
 
-* La fonction `ref()` envoie une référence réactive :
-  * Sa valeur (champ `value`) est traquée.
+* La fonction `ref()` renvoie une référence réactive :
+  * Sa valeur (champ `value`) est suivie.
   * Chaque changement déclenche une mise à jour des composants impactés.
   * Pas besoin de déréférencement dans le gabarit.
 
@@ -83,7 +83,7 @@ createApp({
 
 <div class="fragment fade-in-then-out">
 
-* La valeur est un proxy à l'objet original.
+* La valeur est un proxy de l'objet original.
 * Fonction `toRaw()` pour déproxifier.
 
 ```javascript []
@@ -100,7 +100,7 @@ console.log(obj === toRaw(objRef.value)); // true
 
 <div class="fragment fade-in-then-out">
 
-* La fonction `computed()` envoie une référence à une valeur dérivée à partir des autres références.
+* La fonction `computed()` renvoie une référence à une valeur dérivée à partir d'autres références.
 
 ```javascript
 const { createApp, ref, computed } = Vue;
@@ -128,7 +128,7 @@ const { createApp, ref } = Vue;
 createApp({
   template: '<form ref="formRef"><input @click="reset()"/></form>',
   setup() {
-    const formRef = ref(null);  // Réf sera peuplée lors du montage
+    const formRef = ref(null);  // La réf sera remplie lors du montage
     const reset = () => formRef.value?.reset();
     return { formRef, reset };
   },

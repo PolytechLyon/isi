@@ -35,7 +35,7 @@
 
 <div class="fragment fade-in-then-out" data-fragment-index="3">
 
-* Template en HTML
+* Gabarit en HTML
 
 ```vue
 <template>
@@ -158,9 +158,9 @@ export default {
 
 <div class="fragment fade-in">
 
-* Avantage
+* Avantages
   * Meilleure lisibilité du code
-  * Gabarits compilés en avance
+  * Gabarits compilés à l'avance
   * Style avec portée limitée au composant
   * Enregistrement optimisé des composants
 * Inconvénients

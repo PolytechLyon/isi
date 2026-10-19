@@ -2,7 +2,7 @@
 
 <div class="fragment fade-out" data-fragment-index="1">
 
-### Les utils
+### Les outils
 * Outil de gestion de paquets `npm`
 * Groupeur de modules (bundler) `esbuild`
 * Serveur de développement `vite`
@@ -13,7 +13,7 @@
 
 ### Installation npm
 * Linux Debian (une méthode)
-  * `apt install npm` veilles versions node et npm
+  * `apt install npm` anciennes versions de Node.js et npm
   * `sudo npx n latest` dernières versions
 * Windows
   * https://nodejs.org/en/download/prebuilt-installer
