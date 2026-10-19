@@ -7,15 +7,15 @@
 ~JavaScript~ **TypeScript**
 * Haut niveau
 * ~Interprété~ **Transpilé**
-* ~Typage faible et dynamique~ **Typage fort et statique**
-* Orienté-objet
+* ~Typage dynamique et faible~ **Typage fort et statique**
+* Orienté objet
 * Monothread
 
 </div>
 
 <div class="fragment fade-in-then-out" data-fragment-index="1">
 
-* Le code TypeScript transpile en code JavaScript
+* Le code TypeScript est transpilé en code JavaScript
 * Généralement, un code JavaScript valide est aussi un code TypeScript valide
 * TypeScript ajoute un typage optionnel à JavaScript
 
@@ -24,8 +24,8 @@
 <div class="fragment fade-in-then-out" data-fragment-index="2">
 
 Annotations de type
-* Syntax : `:` suivit d'un type
-* Elles seront supprimées dans le code JavaScript
+* Syntaxe : `:` suivi d'un type
+* Elles sont supprimées du code JavaScript généré
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;">
 
@@ -62,8 +62,8 @@ const received = new Date();
 <div class="fragment fade-in-then-out" data-fragment-index="3">
 
 Vérification de type
-* Le type de variable, déclaré ou inféré, sera vérifié
-* TypeScript compile, mais génère une erreur
+* Le type d'une variable, déclaré ou inféré, est vérifié
+* Le code est transpilé, mais une erreur est signalée
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;">
 

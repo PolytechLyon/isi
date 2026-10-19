@@ -20,7 +20,7 @@ const secure: boolean = true;
 <div class="fragment fade-in-then-out" data-fragment-index="1">
 
 Types union
-* Syntax : type1 `|` type2
+* Syntaxe : type1 `|` type2
 
 ```typescript
 let width: string | number = "12px";
