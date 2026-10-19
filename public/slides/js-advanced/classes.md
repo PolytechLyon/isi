@@ -78,7 +78,7 @@ Propriétés privées
 </li>
 
 <li class="fragment fade-in-then-out" data-fragment-index="9">
-Accesseur de propriétés (mots-clés <code>get</code> et <code>set</code>)
+Accesseurs de propriétés (mots-clés <code>get</code> et <code>set</code>)
 </li>
 
 <li class="fragment fade-in" data-fragment-index="10">
