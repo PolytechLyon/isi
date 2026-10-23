@@ -49,7 +49,7 @@
   <div id="app">
     <div>{{ text }}</div>
     <button @click="toggleText()">Many times</button>
-    <button @click.once="toggleText()">Onces</button>
+    <button @click.once="toggleText()">Once</button>
   </div>
 ```
 
