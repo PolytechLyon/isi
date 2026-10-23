@@ -108,7 +108,7 @@ app.mount('#app');
 
 <div class="fragment fade-in-then-out" data-fragment-index="7">
 
-* Les attributs (props) passent du composant parent au composant enfant
+* Les attributs (props) passent leurs valeurs du composant parent au composant enfant
 
 ```html [2-5]
   <div id="app">
