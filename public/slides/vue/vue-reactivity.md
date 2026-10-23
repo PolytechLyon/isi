@@ -13,11 +13,14 @@
 ```javascript not-runnable []
 const { createApp } = Vue;
 createApp({
- template: '{{ c }}',
+ template: `<button @click="click">
+  {{ counter }}</button>`,
  setup() {
-  let c = 0;
-  setInterval(() => c++, 500);
-  return { c }
+  let counter = 0;
+  function click() {
+   counter++;
+  }
+  return { counter, click }
  }
 }).mount('#app');
 ```
@@ -33,11 +36,14 @@ createApp({
 ```javascript not-runnable []
 const { createApp, ref } = Vue;
 createApp({
- template: '{{ c }}',
+ template: `<button @click="click">
+  {{ counter }}</button>`,
  setup() {
-  const c = ref(0);
-  setInterval(() => c.value++, 500);
-  return { c }
+  const counter = ref(0);
+  function click() {
+   counter.value++;
+  }
+  return { counter, click }
  }
 }).mount('#app');
 ```
@@ -63,16 +69,17 @@ createApp({
 
 Réactivité profonde
 
-```javascript not-runnable
+```javascript fix not-runnable
 const { createApp, ref } = Vue;
 createApp({
-  template: '{{ a.b.counter }}',
+  template: `<button @click="click">
+    {{ a.b.counter }}</button>`,
   setup() {
-    const a = ref({
-      b: { counter: 0 },
-    });
-    setInterval(() => a.value.b.counter++, 500);
-    return { a }
+    const a = ref({ b: { counter: 0 } });
+    function click() {
+      a.value.b.counter++;
+    }
+    return { a, click }
   }
 }).mount('#app');
 ```

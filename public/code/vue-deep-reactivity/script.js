@@ -1,11 +1,14 @@
 const { createApp, ref } = Vue;
 createApp({
-    template: '{{ a.b.counter }}',
+    template: `<button @click="click">
+        {{ a.b.counter }}</button>`,
     setup() {
         const a = ref({
             b: { counter: 0 },
         });
-        setInterval(() => a.value.b.counter++, 500);
-        return { a }
+        function click() {
+            a.value.b.counter++;
+        }
+        return { a, click }
     }
 }).mount('#app');
