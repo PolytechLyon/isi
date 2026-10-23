@@ -43,10 +43,13 @@
 <div class="fragment fade-in-then-out">
 
 * Liaison d'événement
+* Modificateurs optionnels : `.stop`, `.prevent`, etc.
 
 ```html
   <div id="app">
-    <button @click="toggleText()">{{ text }}</button>
+    <div>{{ text }}</div>
+    <button @click="toggleText()">Many times</button>
+    <button @click.once="toggleText()">Onces</button>
   </div>
 ```
 

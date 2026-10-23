@@ -11,7 +11,9 @@
 
 <body>
   <div id="app">
-    <button @click="toggleText()">{{ text }}</button>
+    <div>{{ text }}</div>
+    <button @click="toggleText()">Many times</button>
+    <button @click.once="toggleText()">Once</button>
   </div>
   <script src="https://unpkg.com/vue@3"></script>
   <script src="script.js"></script>

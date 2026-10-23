@@ -1,9 +1,9 @@
 const { createApp, ref } = Vue;
 createApp({
     setup() {
-        const text = ref('Click me');
+        const text = ref('Hello');
         function toggleText() {
-            text.value = text.value === 'Click me' ? 'Cliquez-moi' : 'Click me';
+            text.value = text.value === 'Hello' ? 'Hi' : 'Hello';
         }
         return { text, toggleText };
     }
