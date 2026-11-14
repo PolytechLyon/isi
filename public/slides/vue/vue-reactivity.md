@@ -105,6 +105,28 @@ console.log(obj === toRaw(objRef.value)); // true
 
 </div> <!-- .fragment -->
 
+
+<div class="fragment fade-in-then-out">
+
+* Une liaison bidirectionnelle se réalise grâce à `v-model`
+* Le champ de saisie et la référence sont synchronisés
+
+```javascript not-runnable
+const { createApp, ref } = Vue;
+createApp({
+  template: '<input v-model="text" /><br/>{{ text }}',
+  setup() {
+    const text = ref("Bonjour");
+    return { text };
+  }
+})
+.mount('#app');
+```
+
+<div data-code-example="vue-reactivity-v-model" data-code-example-size="small"></div>
+
+</div> <!-- .fragment -->
+
 <div class="fragment fade-in-then-out">
 
 * La fonction `computed()` renvoie une référence à une valeur dérivée à partir d'autres références
