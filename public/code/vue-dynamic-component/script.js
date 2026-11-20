@@ -4,10 +4,10 @@ import AppHistory from './AppHistory.js'
 const { createApp, ref, computed } = Vue;
 
 const routes = { '/': AppHome, '/history': AppHistory };
-const currentPath = ref(window.location.hash);
+const path = ref(window.location.hash);
 window.addEventListener('hashchange',
-    () => currentPath.value = window.location.hash);
-const CurrentView = computed(() => routes[currentPath.value.slice(1) || '/']);
+    () => path.value = window.location.hash);
+const CurrentView = computed(() => routes[path.value.slice(1)] ?? AppHome);
 createApp({
     setup() {
         return { CurrentView };
