@@ -29,7 +29,7 @@ const routes = [
   { path: '/history', component: AppHistory },
 ];
 const router = createRouter({
-  history: createMemoryHistory(),  // pour la démo
+  history: createWebHashHistory(),  // pour la démo
   routes,
 });
 createApp({})

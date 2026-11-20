@@ -1,7 +1,7 @@
 import AppHome from './AppHome.js'
 import AppHistory from './AppHistory.js'
 
-const { createMemoryHistory, createRouter } = VueRouter;
+const { createWebHashHistory, createRouter } = VueRouter;
 const { createApp } = Vue;
 
 const routes = [
@@ -10,7 +10,7 @@ const routes = [
 ];
 
 const router = createRouter({
-    history: createMemoryHistory(),
+    history: createWebHashHistory(),
     routes,
 });
 
